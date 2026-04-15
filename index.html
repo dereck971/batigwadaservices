@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BatiGwadaServices - Annuaire Artisans BTP Guadeloupe</title>
+<meta name="description" content="Trouvez un artisan du BTP en Guadeloupe. 5 800+ professionnels vérifiés : maçons, plombiers, électriciens, charpentiers, peintres... 100% gratuit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--navy:#0F1923;--navy-light:#1B2838;--navy-card:#1E2D3D;--navy-card-hover:#243447;
+--accent:#E67E22;--accent-hover:#D35400;--accent-glow:rgba(230,126,34,0.15);
+--green:#2ECC71;--green-hover:#27AE60;
+--bg-light:#F5F7FA;--surface:#fff;
+--border:rgba(255,255,255,0.08);--border-light:#e2e8f0;
+--text:#E8ECF1;--text-muted:#7F8C8D;--text-dark:#1B2838;--text-dark-2:#64748b;
+--ff:'Inter',system-ui,-apple-system,sans-serif;
+--radius:8px;--radius-lg:12px;--radius-xl:16px;
+--shadow:0 4px 12px rgba(0,0,0,0.08);--shadow-lg:0 12px 40px rgba(0,0,0,0.12);
+--transition:250ms ease-out;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--ff);color:var(--text);background:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* === HEADER === */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,25,35,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center}
+.header .container{display:flex;align-items:center;justify-content:space-between;width:100%}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;letter-spacing:-0.02em}
+.logo-icon{width:32px;height:32px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff;font-weight:800}
+.logo span{color:var(--accent)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{font-size:.85rem;font-weight:500;color:var(--text-muted);transition:color var(--transition);letter-spacing:.3px}
+.nav a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:var(--radius);font-weight:600;font-size:.85rem;border:none;cursor:pointer;transition:all var(--transition);text-decoration:none}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-hover);transform:translateY(-1px);box-shadow:0 8px 24px var(--accent-glow)}
+.btn-outline{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+.btn-outline:hover{background:var(--accent);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-hover);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{width:22px;height:2px;background:var(--text);transition:all .3s;border-radius:2px}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-nav{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(15,25,35,0.98);backdrop-filter:blur(12px);padding:20px 24px;flex-direction:column;gap:16px;border-bottom:1px solid var(--border)}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-size:1rem;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--text-muted)}
+
+/* === HERO === */
+.hero{padding:120px 0 60px;background:linear-gradient(180deg,var(--navy) 0%,#12222e 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:20%;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 70%);pointer-events:none}
+.hero-content{position:relative;text-align:center;max-width:740px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.3);border-radius:100px;font-size:.75rem;font-weight:600;color:var(--green);margin-bottom:24px;letter-spacing:.5px;text-transform:uppercase}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:16px;letter-spacing:-0.03em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:1.05rem;color:var(--text-muted);margin-bottom:36px;max-width:560px;margin-left:auto;margin-right:auto}
+
+/* === SEARCH BAR === */
+.search-bar{display:flex;gap:0;background:var(--navy-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;max-width:680px;margin:0 auto}
+.search-bar input,.search-bar select{background:transparent;border:none;color:var(--text);padding:16px 18px;font-size:.9rem;font-family:var(--ff);outline:none;flex:1;min-width:0}
+.search-bar input::placeholder{color:var(--text-muted)}
+.search-bar select{border-left:1px solid var(--border);color:var(--text-muted);cursor:pointer;max-width:200px;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237F8C8D' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.search-bar select option{background:var(--navy-light);color:var(--text)}
+.search-bar .btn{border-radius:0;padding:16px 28px;font-size:.9rem;flex-shrink:0}
+
+/* === STATS === */
+.stats{padding:40px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat-num{font-size:1.8rem;font-weight:800;color:var(--accent);letter-spacing:-0.02em}
+.stat-label{font-size:.78rem;color:var(--text-muted);margin-top:4px;text-transform:uppercase;letter-spacing:1px}
+
+/* === RESULTS === */
+.results-section{padding:60px 0;min-height:200px}
+.results-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+.results-header h2{font-size:1.3rem;font-weight:700}
+.results-count{font-size:.85rem;color:var(--text-muted)}
+.filters{display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+.filters select{background:var(--navy-card);border:1px solid var(--border);color:var(--text-muted);padding:10px 36px 10px 14px;border-radius:var(--radius);font-size:.82rem;font-family:var(--ff);cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237F8C8D' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+.filters select option{background:var(--navy-light);color:var(--text)}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--navy-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;transition:all var(--transition)}
+.card:hover{background:var(--navy-card-hover);border-color:rgba(230,126,34,0.3);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+.card-cat{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:600;margin-bottom:8px}
+.card-name{font-size:1rem;font-weight:700;margin-bottom:6px;color:var(--text)}
+.card-commune{font-size:.82rem;color:var(--text-muted);margin-bottom:12px;display:flex;align-items:center;gap:4px}
+.card-commune::before{content:'';display:inline-block;width:4px;height:4px;background:var(--green);border-radius:50%}
+.card-phone{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:var(--radius);font-size:.82rem;font-weight:600;color:var(--green);transition:all var(--transition)}
+.card-phone:hover{background:rgba(46,204,113,0.2)}
+.card-no-phone{font-size:.78rem;color:var(--text-muted);font-style:italic}
+.empty-state{text-align:center;padding:60px 20px;color:var(--text-muted)}
+.empty-state h3{font-size:1.2rem;color:var(--text);margin-bottom:8px}
+.pagination{display:flex;justify-content:center;gap:8px;margin-top:32px;flex-wrap:wrap}
+.page-btn{padding:8px 14px;background:var(--navy-card);border:1px solid var(--border);border-radius:var(--radius);color:var(--text-muted);font-size:.82rem;cursor:pointer;transition:all var(--transition);font-family:var(--ff)}
+.page-btn:hover,.page-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* === CATEGORIES === */
+.categories{padding:60px 0;background:linear-gradient(180deg,transparent,rgba(230,126,34,0.03))}
+.categories h2{text-align:center;font-size:1.6rem;font-weight:800;margin-bottom:8px}
+.categories .subtitle{text-align:center;color:var(--text-muted);font-size:.9rem;margin-bottom:36px}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.cat-card{background:var(--navy-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px 16px;text-align:center;cursor:pointer;transition:all var(--transition)}
+.cat-card:hover{background:var(--navy-card-hover);border-color:rgba(230,126,34,0.3);transform:translateY(-2px)}
+.cat-card-icon{font-size:1.6rem;margin-bottom:8px}
+.cat-card-name{font-size:.78rem;font-weight:600;margin-bottom:4px;line-height:1.3}
+.cat-card-count{font-size:.7rem;color:var(--text-muted)}
+
+/* === INSCRIPTION === */
+.inscription{padding:80px 0;background:var(--bg-light)}
+.inscription *{color:var(--text-dark)}
+.inscription-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.inscription-pitch h2{font-size:1.8rem;font-weight:800;margin-bottom:16px;line-height:1.2}
+.inscription-pitch h2 em{font-style:normal;color:var(--accent)}
+.inscription-pitch p{color:var(--text-dark-2);font-size:.92rem;margin-bottom:16px;line-height:1.7}
+.inscription-pitch .benefit{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px}
+.inscription-pitch .benefit-icon{width:22px;height:22px;background:rgba(46,204,113,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:.7rem;color:var(--green)}
+.inscription-pitch .benefit-text{font-size:.88rem;color:var(--text-dark-2)}
+.inscription-pitch .benefit-text strong{color:var(--text-dark)}
+.form-card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:32px;box-shadow:var(--shadow-lg)}
+.form-card h3{font-size:1.1rem;font-weight:700;margin-bottom:20px;text-align:center}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-group{margin-bottom:12px}
+.form-group label{display:block;font-size:.75rem;font-weight:600;margin-bottom:4px;color:var(--text-dark-2);text-transform:uppercase;letter-spacing:.5px}
+.form-group input,.form-group select{width:100%;padding:12px 14px;border:1px solid var(--border-light);border-radius:var(--radius);font-size:.88rem;font-family:var(--ff);color:var(--text-dark);background:var(--surface);transition:border-color var(--transition)}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+.form-group input::placeholder{color:#94a3b8}
+.form-submit{width:100%;padding:14px;font-size:.95rem;margin-top:8px}
+.form-note{text-align:center;font-size:.72rem;color:var(--text-dark-2);margin-top:12px}
+.form-success{display:none;text-align:center;padding:40px 20px}
+.form-success h3{color:var(--green);font-size:1.3rem;margin-bottom:8px}
+
+/* === FAQ === */
+.faq{padding:80px 0}
+.faq h2{text-align:center;font-size:1.6rem;font-weight:800;margin-bottom:36px}
+.faq-list{max-width:700px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.06);overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 0;cursor:pointer;font-weight:600;font-size:.92rem;gap:16px}
+.faq-q:hover{color:var(--accent)}
+.faq-icon{font-size:1.2rem;color:var(--text-muted);transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-icon{transform:rotate(45deg);color:var(--accent)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;font-size:.88rem;color:var(--text-muted);line-height:1.7}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:18px}
+
+/* === FOOTER === */
+.footer{padding:48px 0 24px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.footer-brand p{font-size:.82rem;color:var(--text-muted);margin-top:8px;line-height:1.6;max-width:320px}
+.footer-links h4{font-size:.78rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:14px}
+.footer-links a{display:block;font-size:.85rem;color:var(--text-muted);padding:4px 0;transition:color var(--transition)}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.04);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--text-muted);flex-wrap:wrap;gap:8px}
+
+/* === RESPONSIVE === */
+@media(max-width:768px){
+.nav{display:none}
+.hamburger{display:flex}
+.hero{padding:100px 0 48px}
+.hero h1{font-size:1.8rem}
+.search-bar{flex-direction:column;border-radius:var(--radius)}
+.search-bar input,.search-bar select{border-left:none;border-bottom:1px solid var(--border);max-width:none}
+.search-bar .btn{border-radius:0 0 var(--radius) var(--radius)}
+.stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+.results-grid{grid-template-columns:1fr}
+.cat-grid{grid-template-columns:repeat(2,1fr)}
+.inscription-grid{grid-template-columns:1fr}
+.form-row{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr;gap:24px}
+.footer-bottom{flex-direction:column;text-align:center}
+.filters{flex-direction:column}
+.filters select{width:100%}
+}
+@media(max-width:480px){
+.hero h1{font-size:1.5rem}
+.stat-num{font-size:1.4rem}
+.cat-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+<div class="container">
+<a href="#" class="logo"><div class="logo-icon">B</div>Bati<span>Gwada</span></a>
+<nav class="nav">
+<a href="#search">Rechercher</a>
+<a href="#categories">Categories</a>
+<a href="#inscription">S'inscrire</a>
+<a href="#faq">FAQ</a>
+</nav>
+<a href="#search" class="btn btn-accent">Trouver un artisan</a>
+<button class="hamburger" id="hamburger" aria-label="Menu">
+<span></span><span></span><span></span>
+</button>
+</div>
+</header>
+<nav class="mobile-nav" id="mobile-nav">
+<a href="#search">Rechercher un artisan</a>
+<a href="#categories">Categories</a>
+<a href="#inscription">Inscription artisan</a>
+<a href="#faq">FAQ</a>
+<a href="mailto:contact@karukera-conseil.com">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+<div class="container hero-content">
+<div class="hero-badge">100% gratuit pour les particuliers</div>
+<h1>Trouvez <em>l'artisan qu'il vous faut</em> en Guadeloupe</h1>
+<p>Le plus grand annuaire de professionnels du BTP en 971. Recherchez, comparez et contactez directement.</p>
+<div class="search-bar" id="search">
+<input type="text" id="search-input" placeholder="Rechercher un artisan, une entreprise...">
+<select id="search-cat">
+<option value="">Toutes categories</option>
+</select>
+<button class="btn btn-accent" id="search-btn">Rechercher</button>
+</div>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+<div class="container">
+<div class="stats-grid">
+<div><div class="stat-num" id="stat-total">5 862</div><div class="stat-label">Artisans</div></div>
+<div><div class="stat-num">74</div><div class="stat-label">Categories</div></div>
+<div><div class="stat-num">32</div><div class="stat-label">Communes</div></div>
+<div><div class="stat-num">100%</div><div class="stat-label">Guadeloupe</div></div>
+</div>
+</div>
+</section>
+
+<!-- RESULTS -->
+<section class="results-section" id="results">
+<div class="container">
+<div class="results-header">
+<h2 id="results-title">Artisans en Guadeloupe</h2>
+<span class="results-count" id="results-count"></span>
+</div>
+<div class="filters">
+<select id="filter-cat"><option value="">Toutes les categories</option></select>
+<select id="filter-commune"><option value="">Toutes les communes</option></select>
+</div>
+<div id="results-grid" class="results-grid"></div>
+<div id="pagination" class="pagination"></div>
+</div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
+<div class="container">
+<h2>Categories populaires</h2>
+<p class="subtitle">Cliquez pour filtrer la recherche</p>
+<div class="cat-grid" id="cat-grid"></div>
+</div>
+</section>
+
+<!-- INSCRIPTION -->
+<section class="inscription" id="inscription">
+<div class="container">
+<div class="inscription-grid">
+<div class="inscription-pitch">
+<h2>Vous etes <em>artisan</em> en Guadeloupe ?</h2>
+<p>Rejoignez le plus grand annuaire BTP de la 971. Inscription gratuite, visibilite immediate.</p>
+<div class="benefit"><div class="benefit-icon">&#10003;</div><div class="benefit-text"><strong>Fiche gratuite</strong> visible par des milliers de particuliers chaque mois</div></div>
+<div class="benefit"><div class="benefit-icon">&#10003;</div><div class="benefit-text"><strong>Fiche Premium</strong> : mise en avant, badge verifie, avis clients (99 euros/mois)</div></div>
+<div class="benefit"><div class="benefit-icon">&#10003;</div><div class="benefit-text"><strong>Aucun engagement</strong> : resiliable a tout moment</div></div>
+<div class="benefit"><div class="benefit-icon">&#10003;</div><div class="benefit-text"><strong>5 800+ pros</strong> deja inscrits sur la plateforme</div></div>
+</div>
+<div class="form-card" id="form-card">
+<h3>Inscription gratuite</h3>
+<form id="artisan-form">
+<div class="form-row">
+<div class="form-group">
+<label for="f-nom">Nom / Prenom</label>
+<input type="text" id="f-nom" name="nom" required placeholder="Jean Dupont">
+</div>
+<div class="form-group">
+<label for="f-entreprise">Entreprise</label>
+<input type="text" id="f-entreprise" name="entreprise" placeholder="Mon Entreprise SARL">
+</div>
+</div>
+<div class="form-group">
+<label for="f-categorie">Categorie / Metier</label>
+<select id="f-categorie" name="categorie" required>
+<option value="">Choisir votre metier</option>
+<option>Electricite</option>
+<option>Plomberie</option>
+<option>Maconnerie</option>
+<option>Charpentiers</option>
+<option>Peinture</option>
+<option>Menuiserie</option>
+<option>Couverture et etancheite</option>
+<option>Climatisation / Froid</option>
+<option>Carreleurs</option>
+<option>Terrassement</option>
+<option>Paysagistes</option>
+<option>Architectes</option>
+<option>Diagnostiqueurs immobiliers</option>
+<option>Autre</option>
+</select>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="f-tel">Telephone</label>
+<input type="tel" id="f-tel" name="telephone" required placeholder="0690 XX XX XX">
+</div>
+<div class="form-group">
+<label for="f-email">Email</label>
+<input type="email" id="f-email" name="email" required placeholder="contact@entreprise.com">
+</div>
+</div>
+<div class="form-group">
+<label for="f-commune">Commune</label>
+<input type="text" id="f-commune" name="commune" placeholder="Baie-Mahault, Les Abymes...">
+</div>
+<button type="submit" class="btn btn-accent form-submit">S'inscrire gratuitement</button>
+<p class="form-note">En vous inscrivant, vous acceptez d'etre contacte par notre equipe.</p>
+</form>
+<div class="form-success" id="form-success">
+<h3>Inscription envoyee !</h3>
+<p>Notre equipe vous contactera sous 48h pour activer votre fiche.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+<div class="container">
+<h2>Questions frequentes</h2>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q"><span>La recherche d'artisans est-elle gratuite ?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Oui, la recherche est 100% gratuite pour les particuliers. Vous pouvez consulter les fiches, appeler et contacter autant d'artisans que vous le souhaitez.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q"><span>Comment s'inscrire en tant qu'artisan ?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Remplissez le formulaire d'inscription ci-dessus. L'inscription de base est gratuite. Notre equipe vous contactera sous 48h pour valider votre fiche et la mettre en ligne.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q"><span>Qu'est-ce que la fiche Premium ?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">La fiche Premium (99 euros/mois) vous place en tete des resultats, ajoute un badge "Verifie", affiche vos avis clients et vos realisations. Resiliable a tout moment, sans engagement.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q"><span>Quelles zones sont couvertes ?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">BatiGwadaServices couvre toute la Guadeloupe : Grande-Terre, Basse-Terre, Marie-Galante, Les Saintes et La Desirade. Plus de 32 communes sont representees dans notre annuaire.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q"><span>Les artisans sont-ils verifies ?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Tous les artisans Premium passent par une verification (SIRET, assurance decennale, references). Les fiches gratuites sont signalees comme "non verifiees" par transparence.</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="logo"><div class="logo-icon">B</div>Bati<span>Gwada</span></div>
+<p>Le plus grand annuaire de professionnels du BTP en Guadeloupe. Un service de Karukera Conseil Immobilier.</p>
+</div>
+<div class="footer-links">
+<h4>Navigation</h4>
+<a href="#search">Rechercher</a>
+<a href="#categories">Categories</a>
+<a href="#inscription">Inscription</a>
+<a href="#faq">FAQ</a>
+</div>
+<div class="footer-links">
+<h4>Contact</h4>
+<a href="mailto:contact@karukera-conseil.com">contact@karukera-conseil.com</a>
+<a href="tel:+590690000000">Guadeloupe (971)</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>&copy; 2026 BatiGwadaServices - Karukera Conseil Immobilier</span>
+<span>Fait avec passion en Guadeloupe</span>
+</div>
+</div>
+</footer>
+
+<script>
+/* === DATA === */
+let allData=[], currentPage=1, perPage=20, filtered=[];
+
+async function loadData(){
+  try{
+    const r=await fetch('/data/artisans.json');
+    allData=await r.json();
+    document.getElementById('stat-total').textContent=allData.length.toLocaleString('fr');
+    populateFilters();
+    populateCategories();
+  }catch(e){console.error('Erreur chargement:',e)}
+}
+
+function populateFilters(){
+  const cats={}, communes={};
+  allData.forEach(a=>{
+    if(a.categorie_principale)cats[a.categorie_principale]=(cats[a.categorie_principale]||0)+1;
+    if(a.commune)communes[a.commune]=(communes[a.commune]||0)+1;
+  });
+  const catSel=document.getElementById('filter-cat');
+  const searchCat=document.getElementById('search-cat');
+  Object.entries(cats).sort((a,b)=>b[1]-a[1]).forEach(([c,n])=>{
+    const o=document.createElement('option');o.value=c;o.textContent=`${c} (${n})`;
+    catSel.appendChild(o);
+    searchCat.appendChild(o.cloneNode(true));
+  });
+  const comSel=document.getElementById('filter-commune');
+  Object.entries(communes).sort((a,b)=>a[0].localeCompare(b[0])).forEach(([c,n])=>{
+    const o=document.createElement('option');o.value=c;o.textContent=`${c} (${n})`;
+    comSel.appendChild(o);
+  });
+}
+
+function populateCategories(){
+  const cats={};
+  allData.forEach(a=>{if(a.categorie_principale)cats[a.categorie_principale]=(cats[a.categorie_principale]||0)+1});
+  const icons={'Electricite':'&#9889;','Plomberie':'&#128688;','Maconnerie':'&#127975;','Menuiserie':'&#129717;','Peinture':'&#127912;','Charpentiers':'&#127968;','Climatisation / Froid':'&#10052;','Couverture et etancheite':'&#127968;','Terrassement':'&#127959;','Paysagistes':'&#127793;','Architectes':'&#128208;','Agents immobiliers':'&#127970;','Gros oeuvre & BTP':'&#128295;','Second oeuvre':'&#128736;','Carreleurs':'&#129513;','Diagnostiqueurs immobiliers':'&#128269;'};
+  const top=Object.entries(cats).sort((a,b)=>b[1]-a[1]).slice(0,12);
+  const grid=document.getElementById('cat-grid');
+  grid.innerHTML='';
+  top.forEach(([c,n])=>{
+    const d=document.createElement('div');d.className='cat-card';
+    d.innerHTML=`<div class="cat-card-icon">${icons[c]||'&#128295;'}</div><div class="cat-card-name">${c}</div><div class="cat-card-count">${n} pros</div>`;
+    d.onclick=()=>{document.getElementById('filter-cat').value=c;doSearch();document.getElementById('results').scrollIntoView({behavior:'smooth'})};
+    grid.appendChild(d);
+  });
+}
+
+/* === SEARCH === */
+function doSearch(){
+  const q=document.getElementById('search-input').value.toLowerCase().trim();
+  const cat=document.getElementById('filter-cat').value;
+  const commune=document.getElementById('filter-commune').value;
+  filtered=allData.filter(a=>{
+    if(cat && a.categorie_principale!==cat) return false;
+    if(commune && a.commune!==commune) return false;
+    if(q){
+      const hay=`${a.nom_entreprise} ${a.categorie_principale} ${a.sous_categorie} ${a.commune}`.toLowerCase();
+      return hay.includes(q);
+    }
+    return true;
+  });
+  currentPage=1;
+  renderResults();
+}
+
+function renderResults(){
+  const grid=document.getElementById('results-grid');
+  const countEl=document.getElementById('results-count');
+  const titleEl=document.getElementById('results-title');
+  if(filtered.length===0 && !document.getElementById('search-input').value && !document.getElementById('filter-cat').value){
+    grid.innerHTML='<div class="empty-state"><h3>Lancez une recherche</h3><p>Utilisez la barre ci-dessus ou cliquez sur une categorie</p></div>';
+    countEl.textContent='';
+    titleEl.textContent='Artisans en Guadeloupe';
+    document.getElementById('pagination').innerHTML='';
+    return;
+  }
+  if(filtered.length===0){
+    grid.innerHTML='<div class="empty-state"><h3>Aucun resultat</h3><p>Essayez avec d\'autres criteres</p></div>';
+    countEl.textContent='0 resultat';
+    document.getElementById('pagination').innerHTML='';
+    return;
+  }
+  const start=(currentPage-1)*perPage;
+  const page=filtered.slice(start,start+perPage);
+  titleEl.textContent=document.getElementById('filter-cat').value||'Artisans en Guadeloupe';
+  countEl.textContent=`${filtered.length} resultat${filtered.length>1?'s':''}`;
+  grid.innerHTML=page.map(a=>`
+    <div class="card">
+      <div class="card-cat">${a.categorie_principale||''}</div>
+      <div class="card-name">${a.nom_entreprise}</div>
+      <div class="card-commune">${a.commune||'Guadeloupe'}</div>
+      ${a.telephone?`<a href="tel:${a.telephone.replace(/\s/g,'')}" class="card-phone">&#128222; ${a.telephone}</a>`:'<span class="card-no-phone">Telephone non disponible</span>'}
+    </div>
+  `).join('');
+  renderPagination();
+}
+
+function renderPagination(){
+  const total=Math.ceil(filtered.length/perPage);
+  if(total<=1){document.getElementById('pagination').innerHTML='';return}
+  let html='';
+  const start=Math.max(1,currentPage-3);
+  const end=Math.min(total,currentPage+3);
+  if(currentPage>1)html+=`<button class="page-btn" onclick="goPage(${currentPage-1})">&laquo;</button>`;
+  for(let i=start;i<=end;i++){
+    html+=`<button class="page-btn${i===currentPage?' active':''}" onclick="goPage(${i})">${i}</button>`;
+  }
+  if(currentPage<total)html+=`<button class="page-btn" onclick="goPage(${currentPage+1})">&raquo;</button>`;
+  document.getElementById('pagination').innerHTML=html;
+}
+function goPage(p){currentPage=p;renderResults();document.getElementById('results').scrollIntoView({behavior:'smooth'})}
+
+/* === EVENT LISTENERS === */
+document.getElementById('search-btn').addEventListener('click',()=>{
+  document.getElementById('filter-cat').value=document.getElementById('search-cat').value;
+  doSearch();
+  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+});
+document.getElementById('search-input').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();document.getElementById('search-btn').click()}});
+document.getElementById('filter-cat').addEventListener('change',doSearch);
+document.getElementById('filter-commune').addEventListener('change',doSearch);
+
+/* === HAMBURGER === */
+const hamburger=document.getElementById('hamburger');
+const mobileNav=document.getElementById('mobile-nav');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');mobileNav.classList.toggle('open')});
+mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('active');mobileNav.classList.remove('open')}));
+
+/* === FAQ === */
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.closest('.faq-item').classList.toggle('open')));
+
+/* === FORM === */
+document.getElementById('artisan-form').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const fd=new FormData(e.target);
+  const data=Object.fromEntries(fd.entries());
+  try{
+    const r=await fetch('https://formspree.io/f/meerzzro',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    if(r.ok){
+      document.getElementById('artisan-form').style.display='none';
+      document.getElementById('form-success').style.display='block';
+    }else{alert('Erreur lors de l\'envoi. Veuillez reessayer.')}
+  }catch(err){alert('Erreur reseau. Veuillez reessayer.')}
+});
+
+/* === INIT === */
+loadData();
+</script>
+</body>
+</html>
