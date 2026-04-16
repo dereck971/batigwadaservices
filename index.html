@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BatiGwadaServices — Annuaire BTP & Immobilier Guadeloupe 971 🌴</title>
-<meta name="description" content="Annuaire du bâtiment et de l'immobilier en Guadeloupe. 5 800+ professionnels identifiés dans 73 catégories et 73 communes. Trouvez artisans, architectes, agents immobiliers.">
+<meta name="description" content="Annuaire du bâtiment et de l'immobilier en Guadeloupe. 5 800+ professionnels identifiés dans 73 catégories et 38 communes. Trouvez artisans, architectes, agents immobiliers.">
 <meta name="keywords" content="annuaire BTP Guadeloupe, artisan Guadeloupe, architecte 971, plombier Guadeloupe, maçon Baie-Mahault, agent immobilier Guadeloupe, construction Guadeloupe">
 <meta name="author" content="BatiGwadaServices — Écosystème KCI">
 <meta name="robots" content="index, follow">
@@ -119,7 +119,6 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 .hero .container{position:relative;z-index:2;color:#fff;padding-top:100px}
 .hero-tag{display:inline-block;background:rgba(255,255,255,0.1);padding:6px 16px;border-radius:6px;font-size:0.78rem;font-weight:500;margin-bottom:24px;animation:fadeUp 0.8s ease 0.2s both;letter-spacing:0.5px;text-transform:uppercase}
 .hero h1{font-family:'DM Serif Display',Georgia,serif;font-size:3.2rem;font-weight:400;line-height:1.15;margin-bottom:16px;animation:fadeUp 0.8s ease 0.3s both;letter-spacing:-0.5px}
-.hero h1 .highlight{color:var(--warm-orange);position:relative}
 .hero h1 .highlight{color:var(--warm-orange)}
 .hero .subtitle{font-size:1.05rem;color:rgba(255,255,255,0.6);max-width:480px;line-height:1.6;margin-bottom:32px;animation:fadeUp 0.8s ease 0.4s both}
 .search-bar{display:flex;background:#fff;border-radius:var(--radius);overflow:hidden;max-width:640px;box-shadow:var(--shadow-lg);animation:fadeUp 0.8s ease 0.5s both}
@@ -177,8 +176,6 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 .pro-card .rating{font-size:0.82rem}
 .pro-card .rating .stars{color:var(--warm-orange)}
 .badge{display:inline-block;padding:3px 10px;border-radius:50px;font-size:0.7rem;font-weight:600}
-.badge-verified{background:#ecfdf5;color:var(--tropical-green)}
-.badge-premium{background:#fef3c7;color:#b45309}
 @media(max-width:1024px){.pros-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.pros-grid{grid-template-columns:1fr}}
 
@@ -232,16 +229,6 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 /* TROPICAL DIVIDER */
 .tropical-divider{text-align:center;padding:20px 0;font-size:1.5rem;letter-spacing:8px;opacity:0.3}
 
-/* METEO */
-.météo-widget{background:linear-gradient(135deg,var(--ocean-blue),#0d5f73);border-radius:var(--radius);padding:20px;color:#fff;margin-bottom:16px}
-.météo-widget h4{font-size:0.95rem;margin-bottom:12px}
-.météo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.météo-day{background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border-radius:var(--radius-sm);padding:10px;text-align:center}
-.météo-day .day{font-size:0.75rem;opacity:0.8}
-.météo-day .icon{font-size:1.5rem;margin:4px 0}
-.météo-day .temp{font-size:0.85rem;font-weight:600}
-.météo-day .detail{font-size:0.7rem;opacity:0.7}
-
 /* CHATBOT */
 .chatbot-toggle{position:fixed;bottom:24px;right:24px;width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--warm-orange),var(--warm-coral));color:#fff;border:none;cursor:pointer;font-size:1.5rem;box-shadow:0 4px 20px rgba(224,122,47,0.4);z-index:1001;transition:var(--transition);display:flex;align-items:center;justify-content:center}
 .chatbot-toggle:hover{transform:scale(1.1)}
@@ -271,15 +258,11 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 .footer p,.footer a{font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.7}
 .footer a:hover{color:var(--warm-gold)}
 .footer ul li{margin-bottom:8px}
-.footer-socials{display:flex;gap:10px;margin-top:12px}
-.footer-socials a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:0.85rem;transition:var(--transition)}
-.footer-socials a:hover{background:var(--warm-orange);color:#fff}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding:20px 0;text-align:center;font-size:0.82rem;color:rgba(255,255,255,0.4)}
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:24px}}
 
 /* SPA */
 .page-section{display:none}.page-section.active{display:block}
-.text-center{text-align:center}
 
 
 /* RESPONSIVE GRIDS */
@@ -291,7 +274,6 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 @media(max-width:768px){
   .hero-stats-grid{grid-template-columns:repeat(2,1fr)!important}
   .breakdown-grid{grid-template-columns:1fr!important}
-  .pricing-grid .pro-card-featured{transform:none!important}
 }
 @media(max-width:480px){
   .hero-stats-grid{grid-template-columns:1fr 1fr!important;gap:10px!important}
@@ -411,9 +393,9 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
       <p class="section-subtitle">De la côte Caraïbe aux plages de l'Atlantique — chaque commune a ses spécificités</p>
       <div class="places-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
         <div class="img-card animate-on-scroll stagger-1" onclick="showCommune('Les Abymes')" style="min-height:200px"><div style="width:100%;height:220px;background:linear-gradient(135deg,#1a1a2e,#2d1b0e);display:flex;align-items:center;justify-content:center;font-size:3rem">🏙️</div><div class="overlay"><h3>Les Abymes</h3><p id="comCount1">403 professionnels</p></div></div>
-        <div class="img-card animate-on-scroll stagger-2" onclick="showCommune('Baie-Mahault')" style="min-height:200px"><div style="width:100%;height:220px;background:linear-gradient(135deg,#0e3b2e,#1a5c3a);display:flex;align-items:center;justify-content:center;font-size:3rem">🏗️</div><div class="overlay"><h3>Baie-Mahault</h3><p id="comCount2">344 professionnels</p></div></div>
+        <div class="img-card animate-on-scroll stagger-2" onclick="showCommune('Baie-Mahault')" style="min-height:200px"><div style="width:100%;height:220px;background:linear-gradient(135deg,#0e3b2e,#1a5c3a);display:flex;align-items:center;justify-content:center;font-size:3rem">🏗️</div><div class="overlay"><h3>Baie-Mahault</h3><p id="comCount2">479 professionnels</p></div></div>
         <div class="img-card animate-on-scroll stagger-3" onclick="showCommune('Le Gosier')" style="min-height:200px"><div style="width:100%;height:220px;background:linear-gradient(135deg,#0d3d5f,#1a6985);display:flex;align-items:center;justify-content:center;font-size:3rem">🌊</div><div class="overlay"><h3>Le Gosier</h3><p id="comCount3">264 professionnels</p></div></div>
-        <div class="img-card animate-on-scroll stagger-4" onclick="showCommune('Saint-François')" style="min-height:200px"><div style="width:100%;height:220px;background:linear-gradient(135deg,#4a2511,#7c3d1a);display:flex;align-items:center;justify-content:center;font-size:3rem">☀️</div><div class="overlay"><h3>Saint-François</h3><p id="comCount4">171 professionnels</p></div></div>
+        <div class="img-card animate-on-scroll stagger-4" onclick="showCommune('Saint-François')" style="min-height:200px"><div style="width:100%;height:220px;background:linear-gradient(135deg,#4a2511,#7c3d1a);display:flex;align-items:center;justify-content:center;font-size:3rem">☀️</div><div class="overlay"><h3>Saint-François</h3><p id="comCount4">194 professionnels</p></div></div>
       </div>
     </div>
   </section>
@@ -486,7 +468,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
     <div class="container" style="position:relative;z-index:2">
       <div style="text-align:center;margin-bottom:50px">
         <div style="display:inline-block;background:rgba(224,122,47,0.15);border:1px solid rgba(224,122,47,0.3);padding:6px 18px;border-radius:50px;font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#e07a2f;margin-bottom:16px">La base de données la plus complète de Guadeloupe</div>
-        <h2 style="font-family:'DM Serif Display',Georgia,serif;font-size:2.4rem;font-weight:700;margin-bottom:12px;line-height:1.15">5 800+ professionnels référencés<br><span style="color:#d4a017">dans les 73 communes</span> de l'archipel</h2>
+        <h2 style="font-family:'DM Serif Display',Georgia,serif;font-size:2.4rem;font-weight:700;margin-bottom:12px;line-height:1.15">5 800+ professionnels référencés<br><span style="color:#d4a017">dans les 38 communes</span> de l'archipel</h2>
         <p style="color:rgba(255,255,255,0.6);max-width:600px;margin:0 auto;font-size:0.95rem">Constituée à partir de 33 sources différentes — Google, Pages Jaunes, Facebook, Instagram, CMA, data.gouv.fr, Societe.com, notaires.fr et plus encore.</p>
       </div>
 
@@ -497,7 +479,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
           <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:6px">Professionnels identifiés</div>
         </div>
         <div class="animate-on-scroll stagger-2" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:28px 12px">
-          <div style="font-family:'DM Serif Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#d4a017;line-height:1" id="heroStatComs">73</div>
+          <div style="font-family:'DM Serif Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#d4a017;line-height:1" id="heroStatComs">38</div>
           <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:6px">Communes couvertes</div>
         </div>
         <div class="animate-on-scroll stagger-3" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:28px 12px">
@@ -529,13 +511,13 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
         <div>
           <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;color:rgba(255,255,255,0.8)">Top communes</h3>
           <div style="display:flex;flex-direction:column;gap:8px">
-            <div class="animate-on-scroll stagger-1"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Les Abymes</span><span style="color:#e07a2f;font-weight:600">403 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:100%;height:100%;background:linear-gradient(90deg,#e07a2f,#d4a017);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll stagger-2"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Baie-Mahault</span><span style="color:#d4a017;font-weight:600">344 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:85%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll stagger-1"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Les Abymes</span><span style="color:#e07a2f;font-weight:600">403 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:84%;height:100%;background:linear-gradient(90deg,#e07a2f,#d4a017);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll stagger-2"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Baie-Mahault</span><span style="color:#d4a017;font-weight:600">479 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:100%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
             <div class="animate-on-scroll stagger-3"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Le Gosier</span><span style="color:#d4a017;font-weight:600">264 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:65%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll stagger-4"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Petit-Bourg</span><span style="color:#d4a017;font-weight:600">188 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:47%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Pointe-à-Pitre</span><span style="color:#d4a017;font-weight:600">181 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:45%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll stagger-1"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Saint-François</span><span style="color:#d4a017;font-weight:600">171 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:42%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll stagger-2"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span style="opacity:0.5">+ 67 autres communes...</span><span style="color:rgba(255,255,255,0.3)"></span></div></div>
+            <div class="animate-on-scroll stagger-4"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Petit-Bourg</span><span style="color:#d4a017;font-weight:600">217 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:45%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Pointe-à-Pitre</span><span style="color:#d4a017;font-weight:600">163 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:45%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll stagger-1"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Saint-François</span><span style="color:#d4a017;font-weight:600">194 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:42%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll stagger-2"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span style="opacity:0.5">+ 32 autres communes...</span><span style="color:rgba(255,255,255,0.3)"></span></div></div>
           </div>
         </div>
       </div>
@@ -599,7 +581,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 
       <!-- CTA buttons -->
       <div style="text-align:center;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-        <a href="#" onclick="showSection('annuaire')" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#e07a2f,#e8634a);color:#fff;padding:14px 28px;border-radius:50px;font-weight:600;font-size:0.9rem;text-decoration:none;box-shadow:0 4px 16px rgba(224,122,47,0.3);transition:all 0.3s">📋 Parcourir l'annuaire</a>
+        <a href="#annuaire" onclick="event.preventDefault();showSection('annuaire')" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#e07a2f,#e8634a);color:#fff;padding:14px 28px;border-radius:50px;font-weight:600;font-size:0.9rem;text-decoration:none;box-shadow:0 4px 16px rgba(224,122,47,0.3);transition:all 0.3s">📋 Parcourir l'annuaire</a>
       </div>
     </div>
   </section>
@@ -611,7 +593,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item animate-on-scroll stagger-1"><div class="number" data-target="5862">0</div><div class="label">Professionnels identifiés</div></div>
-        <div class="stat-item animate-on-scroll stagger-2"><div class="number" data-target="73">0</div><div class="label">Communes couvertes</div></div>
+        <div class="stat-item animate-on-scroll stagger-2"><div class="number" data-target="38">0</div><div class="label">Communes couvertes</div></div>
         <div class="stat-item animate-on-scroll stagger-3"><div class="number" data-target="73">0</div><div class="label">Catégories métiers</div></div>
         <div class="stat-item animate-on-scroll stagger-4"><div class="number" data-target="33">0</div><div class="label">Sources collectées</div></div>
       </div>
@@ -626,7 +608,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
   <section class="section" style="padding-top:100px">
     <div class="container">
       <div class="section-label">Annuaire</div>
-      <h2 class="section-title serif" id="annTitle">5 800+ professionnels dans 73 communes</h2>
+      <h2 class="section-title serif" id="annTitle">5 800+ professionnels dans 38 communes</h2>
       <p class="section-subtitle">Filtrez par catégorie, sous-catégorie ou commune — ou utilisez Ti Konsey 💬</p>
 
       <!-- FILTRES -->
@@ -908,7 +890,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div><h4>BatiGwadaServices 🌴</h4><p>Annuaire des professionnels de l'immobilier et du BTP en Guadeloupe. 5 800+ professionnels identifiés dans 73 communes.</p></div>
+      <div><h4>BatiGwadaServices 🌴</h4><p>Annuaire des professionnels de l'immobilier et du BTP en Guadeloupe. 5 800+ professionnels identifiés dans 38 communes.</p></div>
       <div><h4>L'annuaire</h4><ul><li><a href="#annuaire" onclick="event.preventDefault();showSection('annuaire')">Architectes & BET</a></li><li><a href="#annuaire" onclick="event.preventDefault();showSection('annuaire')">Gros œuvre & BTP</a></li><li><a href="#annuaire" onclick="event.preventDefault();showSection('annuaire')">Second œuvre</a></li><li><a href="#annuaire" onclick="event.preventDefault();showSection('annuaire')">Toutes catégories</a></li></ul></div>
       <div><h4>KCI</h4><ul><li><a href="#kci" onclick="event.preventDefault();showSection('kci')">Essentielle 49€</a></li><li><a href="#kci" onclick="event.preventDefault();showSection('kci')">Complète 129€</a></li><li><a href="#kci" onclick="event.preventDefault();showSection('kci')">Premium 299€</a></li></ul></div>
       <div><h4>Informations</h4><ul><li><a href="#mentions" onclick="event.preventDefault();showSection('mentions')">Mentions légales</a></li><li><a href="#confidentialite" onclick="event.preventDefault();showSection('confidentialite')">Confidentialité</a></li><li><a href="#contact" onclick="event.preventDefault();showSection('contact')">Contact</a></li></ul></div>
@@ -970,7 +952,7 @@ function renderCommuneList(pros){
   list.innerHTML=pros.map(p=>{
     const emoji=catEmojisMap[p.c]||'📍';
     const color=catColorsMap[p.c]||'#666';
-    const noteHtml=p.ng?'<span style="color:var(--warm-orange)">★ '+p.ng+'</span>'+((p.na&&p.na!=='0')?' <span style="color:var(--text-light);font-size:0.75rem">('+p.na+' avis)</span>':''):'';
+    const noteHtml=p.ng?'<span style="color:var(--warm-orange)">★ '+sanitize(p.ng)+'</span>'+((p.na&&p.na!=='0')?' <span style="color:var(--text-light);font-size:0.75rem">('+sanitize(p.na)+' avis)</span>':''):'';
     const telHtml=p.t?'<div style="font-size:0.82rem;margin-top:6px">📞 <a href="tel:'+p.t.replace(/[^0-9+]/g,'')+'" style="color:var(--warm-orange)">'+sanitize(p.t)+'</a></div>':'';
     const webHtml=p.w?'<div style="font-size:0.82rem;margin-top:2px">🌐 <a href="https://'+encodeURI(p.w)+'" target="_blank" rel="noopener noreferrer" style="color:var(--ocean-blue)">'+sanitize(p.w)+'</a></div>':'';
     const emailHtml=p.e?'<div style="font-size:0.82rem;margin-top:2px">✉️ <a href="mailto:'+encodeURI(p.e)+'" style="color:var(--text-light)">'+sanitize(p.e)+'</a></div>':'';
@@ -1108,7 +1090,7 @@ function sendChat(){
   }
   // KCI
   else if(norm(q).match(/kci|pre.etude|faisabilite|investir|rentable|projet immobilier/)){
-    r=ph+'<br><br>🎯 <strong>Karukera Conseil Immobilier</strong> vous accompagne :<br><br>📄 <strong>Essentielle</strong> — 49€<br><em>Score + fiche terrain + estimation rapide</em><br><br>📊 <strong>Complète</strong> — 129€ ⭐<br><em>Analyse financière + PLU + risques + scénarios</em><br><br>💎 <strong>Premium</strong> — 299€<br><em>Rapport expert complet + 3D terrain + fiscalité</em><br><br><a href="#" onclick="showSection(\'kci\');toggleChatbot()">→ Découvrir les offres</a>';
+    r=ph+'<br><br>🎯 <strong>Karukera Conseil Immobilier</strong> vous accompagne :<br><br>📄 <strong>Essentielle</strong> — 49€<br><em>Score + fiche terrain + estimation rapide</em><br><br>📊 <strong>Complète</strong> — 129€ ⭐<br><em>Analyse financière + PLU + risques + scénarios</em><br><br>💎 <strong>Premium</strong> — 299€<br><em>Rapport expert complet + 3D terrain + fiscalité</em><br><br><a href="#kci" onclick="event.preventDefault();showSection(\'kci\');toggleChatbot()">→ Découvrir les offres</a>';
   }
   // Search artisans
   else {
@@ -1119,12 +1101,12 @@ function sendChat(){
       r=ph+'<br><br>';
       if(label)r+='<strong>'+total+' '+label+'(s)</strong> trouvés'+(total>6?' (voici les 6 meilleurs) ':'')+':<br><br>';
       for(const p of results){
-        r+='⭐ <strong>'+p.n+'</strong>';
-        if(p.ng) r+=' <span style="color:var(--warm-orange)">'+p.ng+'/5</span>';
-        r+='<br>📍 '+p.co;
-        if(p.s && p.s!==p.c) r+=' · '+p.s;
-        if(p.t) r+='<br>📞 '+p.t;
-        if(p.w) r+='<br>🌐 <a href="https://'+p.w+'" target="_blank">'+p.w+'</a>';
+        r+='⭐ <strong>'+sanitize(p.n)+'</strong>';
+        if(p.ng) r+=' <span style="color:var(--warm-orange)">'+sanitize(p.ng)+'/5</span>';
+        r+='<br>📍 '+sanitize(p.co);
+        if(p.s && p.s!==p.c) r+=' · '+sanitize(p.s);
+        if(p.t) r+='<br>📞 '+sanitize(p.t);
+        if(p.w) r+='<br>🌐 <a href="https://'+encodeURI(p.w)+'" target="_blank" rel="noopener noreferrer">'+sanitize(p.w)+'</a>';
         r+='<br><br>';
       }
       r+='<div class="chat-suggestions"><button onclick="chatSuggest(\'pré-étude KCI\')">📊 Pré-étude KCI</button><button onclick="showSection(\'annuaire\');toggleChatbot()">📋 Voir l\'annuaire</button></div>';
@@ -1204,8 +1186,8 @@ fetch('data/artisans.json').then(r=>r.json()).then(rawData=>{
       const stars='★'.repeat(Math.round(parseFloat(p.ng)));
       return '<div class="pro-card animate-on-scroll stagger-'+(i+1)+'">'
         +'<div class="pro-card-img" style="background:linear-gradient(135deg,'+color+'22,'+color+'44);display:flex;align-items:center;justify-content:center"><div style="font-size:2.5rem;font-weight:700;color:'+color+';opacity:0.6">'+initials+'</div></div>'
-        +'<div class="pro-card-body"><h3>'+sanitize(p.n)+'</h3><div class="category">'+emoji+' '+sanitize(p.s)+'</div><div class="location">📍 '+sanitize(p.co)+'</div><div class="rating"><span class="stars">'+stars+'</span> '+p.ng+' ('+p.na+' avis Google)</div>'
-        +(p.t?'<div style="margin-top:6px;font-size:0.82rem">📞 <a href="tel:'+p.t.replace(/[^0-9+]/g,'')+'" style="color:var(--warm-orange)">'+p.t+'</a></div>':'')
+        +'<div class="pro-card-body"><h3>'+sanitize(p.n)+'</h3><div class="category">'+emoji+' '+sanitize(p.s)+'</div><div class="location">📍 '+sanitize(p.co)+'</div><div class="rating"><span class="stars">'+stars+'</span> '+sanitize(p.ng)+' ('+sanitize(p.na)+' avis Google)</div>'
+        +(p.t?'<div style="margin-top:6px;font-size:0.82rem">📞 <a href="tel:'+p.t.replace(/[^0-9+]/g,'')+'" style="color:var(--warm-orange)">'+sanitize(p.t)+'</a></div>':'')
         +'</div></div>';
     }).join('');
   }
@@ -1213,7 +1195,7 @@ fetch('data/artisans.json').then(r=>r.json()).then(rawData=>{
   // === CONNECT CHATBOT TO REAL DATA ===
   window._chatData = allPros;
   console.log('Annuaire chargé: '+allPros.length+' pros, '+Object.keys(meta.categories).length+' catégories, '+Object.keys(meta.communes).length+' communes');
-}).catch(e=>{console.error('Erreur chargement annuaire:',e);document.getElementById('annList').innerHTML='<p style="text-align:center;color:red;padding:40px">Erreur de chargement des données. '+e.message+'</p>'});
+}).catch(e=>{console.error('Erreur chargement annuaire:',e);document.getElementById('annList').innerHTML='<p style="text-align:center;color:red;padding:40px">Erreur de chargement des données. '+sanitize(e.message)+'</p>'});
 
 function populateFilters(meta){
   const fCat=document.getElementById('fCat');
@@ -1221,12 +1203,12 @@ function populateFilters(meta){
   let catOpts='<option value="">Toutes catégories</option>';
   Object.entries(meta.categories).sort((a,b)=>b[1]-a[1]).forEach(([c,n])=>{
     const e=catEmojisMap[c]||'📍';
-    catOpts+='<option value="'+c+'">'+e+' '+c+' ('+n+')</option>';
+    catOpts+='<option value="'+sanitize(c)+'">'+e+' '+sanitize(c)+' ('+n+')</option>';
   });
   fCat.innerHTML=catOpts;
   let comOpts='<option value="">Toutes communes</option>';
   Object.entries(meta.communes).sort((a,b)=>a[0].localeCompare(b[0])).forEach(([c,n])=>{
-    comOpts+='<option value="'+c+'">'+c+' ('+n+')</option>';
+    comOpts+='<option value="'+sanitize(c)+'">'+sanitize(c)+' ('+n+')</option>';
   });
   fCom.innerHTML=comOpts;
 }
@@ -1272,7 +1254,7 @@ function filterAnnuaire() {
   if (cat && catSubs[cat]) {
     let opts = '<option value="">Toutes sous-catégories</option>';
     Object.entries(catSubs[cat]).sort((a,b)=>b[1]-a[1]).forEach(([s,c]) => {
-      opts += '<option value="'+s+'">' + s + ' (' + c + ')</option>';
+      opts += '<option value="'+sanitize(s)+'">' + sanitize(s) + ' (' + c + ')</option>';
     });
     fSub.innerHTML = opts;
     if (sub) fSub.value = sub;
@@ -1305,13 +1287,13 @@ function renderAnnuaire() {
     const color = catColorsMap[p.c] || '#e07a2f';
     const words = p.n.split(/[\s-]+/).filter(w=>w.length>0);
     const initials = words.length>=2 ? (words[0][0]+words[1][0]).toUpperCase() : p.n.slice(0,2).toUpperCase();
-    const stars = p.ng ? '★'.repeat(Math.round(parseFloat(p.ng))) + ' ' + p.ng + '/5' : '';
-    const avis = p.na ? ' (' + p.na + ' avis)' : '';
+    const stars = p.ng ? '★'.repeat(Math.round(parseFloat(p.ng))) + ' ' + sanitize(p.ng) + '/5' : '';
+    const avis = p.na ? ' (' + sanitize(p.na) + ' avis)' : '';
     const verified = p.v ? '<span style="background:#ecfdf5;color:#059669;padding:2px 8px;border-radius:50px;font-size:0.7rem;font-weight:600;margin-left:6px">✓ Vérifié</span>' : '';
-    const siret = p.si ? '<span style="font-size:0.72rem;color:var(--text-light);margin-left:4px" title="SIRET: '+p.si+'">🏢</span>' : '';
+    const siret = p.si ? '<span style="font-size:0.72rem;color:var(--text-light);margin-left:4px" title="SIRET: '+sanitize(p.si)+'">🏢</span>' : '';
     const telBtn = p.t ? '<a href="tel:'+p.t.replace(/[^0-9+]/g,'')+'" style="padding:6px 14px;background:var(--warm-orange);color:#fff;border-radius:50px;font-size:0.78rem;font-weight:600;text-decoration:none">📞 '+sanitize(p.t)+'</a>' : '';
     const emailBtn = p.e ? '<a href="mailto:'+p.e+'" style="padding:6px 14px;background:rgba(6,95,70,0.1);border:1px solid rgba(6,95,70,0.2);color:#065f46;border-radius:50px;font-size:0.78rem;font-weight:500;text-decoration:none">✉️ Email</a>' : '';
-    const webBtn = p.w ? '<a href="'+(p.w.startsWith('http')?p.w:'https://'+p.w)+'" target="_blank" rel="noopener" style="padding:6px 14px;background:transparent;border:1px solid var(--border);color:var(--text);border-radius:50px;font-size:0.78rem;font-weight:500;text-decoration:none">🌐 Site</a>' : '';
+    const webBtn = p.w ? '<a href="'+(p.w.startsWith('http')?encodeURI(p.w):'https://'+encodeURI(p.w))+'" target="_blank" rel="noopener noreferrer" style="padding:6px 14px;background:transparent;border:1px solid var(--border);color:var(--text);border-radius:50px;font-size:0.78rem;font-weight:500;text-decoration:none">🌐 Site</a>' : '';
 
     html += '<div style="display:flex;gap:16px;padding:16px;background:#fff;border:1px solid var(--border);border-radius:12px;transition:all 0.3s;align-items:flex-start" onmouseover="this.style.boxShadow=\'0 4px 20px rgba(0,0,0,0.08)\'" onmouseout="this.style.boxShadow=\'none\'">';
     html += '<div style="width:50px;height:50px;border-radius:10px;background:'+color+';display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.9rem;flex-shrink:0">'+initials+'</div>';
