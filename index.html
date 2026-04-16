@@ -27,10 +27,13 @@
 <link rel="icon" type="image/png" href="images/tk/icon.png">
 <link rel="apple-touch-icon" href="images/tk/avatar.png">
 <!-- Security -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' https: data:; font-src 'self' https://fonts.gstatic.com">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; img-src 'self' https: data:; font-src 'self' https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<!-- Leaflet Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"BatiGwadaServices","url":"https://batigwadaservices.com/","description":"Annuaire BTP et immobilier en Guadeloupe — 5800+ professionnels identifiés","potentialAction":{"@type":"SearchAction","target":"https://batigwadaservices.com/?q={search_term_string}","query-input":"required name=search_term_string"}}
@@ -229,6 +232,10 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 /* TROPICAL DIVIDER */
 .tropical-divider{text-align:center;padding:20px 0;font-size:1.5rem;letter-spacing:8px;opacity:0.3}
 
+/* MAP TOOLTIP */
+.map-tooltip{font-family:'DM Sans',sans-serif!important;font-size:0.82rem!important;padding:8px 12px!important;border-radius:8px!important;box-shadow:0 4px 12px rgba(0,0,0,0.15)!important}
+#communeMap{border-radius:16px}
+
 /* CHATBOT */
 .chatbot-toggle{position:fixed;bottom:24px;right:24px;width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--warm-orange),var(--warm-coral));color:#fff;border:none;cursor:pointer;font-size:1.5rem;box-shadow:0 4px 20px rgba(224,122,47,0.4);z-index:1001;transition:var(--transition);display:flex;align-items:center;justify-content:center}
 .chatbot-toggle:hover{transform:scale(1.1)}
@@ -290,6 +297,8 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
   .search-bar button{padding:14px 20px}
   .hero-badges{gap:12px}
   .hero-badges span{font-size:0.75rem}
+  /* Map mobile */
+  #communeMap{height:320px!important}
   /* Stats grid mobile */
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}
   /* Footer 1 col on very small */
@@ -524,7 +533,9 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 
       <!-- Source badges -->
       <div style="text-align:center;margin-bottom:30px">
-        <div style="margin-bottom:30px;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.2)"><img src="images/Gemini_Generated_Image_krznz7krznz7krzn.png" alt="Carte des artisans en Guadeloupe" style="width:100%;height:auto;display:block"></div>
+        <div style="margin-bottom:30px;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.2)">
+          <div id="communeMap" style="width:100%;height:480px;background:#1a1a2e"></div>
+        </div>
         <h3 style="font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.4);margin-bottom:14px;letter-spacing:1px;text-transform:uppercase">Nos sources</h3>
         <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;align-items:center">
           <!-- Google -->
@@ -1195,6 +1206,25 @@ fetch('data/artisans.json').then(r=>r.json()).then(rawData=>{
   // === CONNECT CHATBOT TO REAL DATA ===
   window._chatData = allPros;
   console.log('Annuaire chargé: '+allPros.length+' pros, '+Object.keys(meta.categories).length+' catégories, '+Object.keys(meta.communes).length+' communes');
+
+  // === CARTE INTERACTIVE ===
+  if(typeof L!=='undefined'&&document.getElementById('communeMap')){
+    const communeCoords={"Les Abymes":[16.2709,-61.5028],"Baie-Mahault":[16.2672,-61.5928],"Le Gosier":[16.2133,-61.4953],"Petit-Bourg":[16.1897,-61.5883],"Le Moule":[16.3333,-61.3500],"Sainte-Anne":[16.2272,-61.3831],"Sainte-Rose":[16.3331,-61.6961],"Lamentin":[16.2706,-61.6333],"Morne-à-l'Eau":[16.3339,-61.4553],"Pointe-à-Pitre":[16.2411,-61.5331],"Capesterre-Belle-Eau":[16.0500,-61.5667],"Basse-Terre":[15.9972,-61.7261],"Pointe-Noire":[16.2333,-61.7833],"Petit-Canal":[16.3833,-61.4833],"Vieux-Habitants":[16.0575,-61.7583],"Saint-Claude":[16.0167,-61.7000],"Gourbeyre":[15.9833,-61.7000],"Bouillante":[16.1333,-61.7667],"Deshaies":[16.3000,-61.7833],"Trois-Rivières":[15.9667,-61.6500],"Port-Louis":[16.4167,-61.5333],"Goyave":[16.1333,-61.5833],"Baillif":[16.0167,-61.7500],"Anse-Bertrand":[16.4667,-61.5000],"Saint-François":[16.2500,-61.2833],"Saint-Claude":[16.0167,-61.7000],"Grand-Bourg":[15.8833,-61.3167],"Capesterre-de-Marie-Galante":[15.8500,-61.2667],"Saint-Louis":[15.9500,-61.3167],"Terre-de-Haut":[15.8625,-61.5875],"Terre-de-Bas":[15.8500,-61.6333],"La Désirade":[16.3000,-61.0500],"Vieux-Fort":[15.9500,-61.7000],"Saint-Martin":[18.0731,-63.0822]};
+    const map=L.map('communeMap',{scrollWheelZoom:false,attributionControl:true}).setView([16.18,-61.55],10);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:18}).addTo(map);
+    const orangeIcon=L.divIcon({className:'',html:'<div style="background:#e07a2f;width:12px;height:12px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.3)"></div>',iconSize:[16,16],iconAnchor:[8,8]});
+    Object.entries(meta.communes).forEach(([commune,count])=>{
+      const coords=communeCoords[commune];
+      if(!coords)return;
+      const radius=Math.max(8,Math.min(30,Math.sqrt(count)*2));
+      const marker=L.circleMarker(coords,{radius:radius,fillColor:'#e07a2f',color:'#fff',weight:2,opacity:1,fillOpacity:0.8}).addTo(map);
+      marker.bindTooltip('<strong>'+sanitize(commune)+'</strong><br>'+count+' professionnels',{direction:'top',className:'map-tooltip'});
+      marker.on('click',function(){showCommune(commune)});
+    });
+    // Lazy init map on scroll
+    const mapObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){map.invalidateSize();mapObs.unobserve(en.target)}})},{threshold:0.1});
+    mapObs.observe(document.getElementById('communeMap'));
+  }
 }).catch(e=>{console.error('Erreur chargement annuaire:',e);document.getElementById('annList').innerHTML='<p style="text-align:center;color:red;padding:40px">Erreur de chargement des données. '+sanitize(e.message)+'</p>'});
 
 function populateFilters(meta){
