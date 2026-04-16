@@ -120,7 +120,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 .hero-tag{display:inline-block;background:rgba(255,255,255,0.1);padding:6px 16px;border-radius:6px;font-size:0.78rem;font-weight:500;margin-bottom:24px;animation:fadeUp 0.8s ease 0.2s both;letter-spacing:0.5px;text-transform:uppercase}
 .hero h1{font-family:'DM Serif Display',Georgia,serif;font-size:3.2rem;font-weight:400;line-height:1.15;margin-bottom:16px;animation:fadeUp 0.8s ease 0.3s both;letter-spacing:-0.5px}
 .hero h1 .highlight{color:var(--warm-orange);position:relative}
-.hero h1 .highlight::after{display:none}
+.hero h1 .highlight{color:var(--warm-orange)}
 .hero .subtitle{font-size:1.05rem;color:rgba(255,255,255,0.6);max-width:480px;line-height:1.6;margin-bottom:32px;animation:fadeUp 0.8s ease 0.4s both}
 .search-bar{display:flex;background:#fff;border-radius:var(--radius);overflow:hidden;max-width:640px;box-shadow:var(--shadow-lg);animation:fadeUp 0.8s ease 0.5s both}
 .search-bar input{flex:1;padding:16px 20px;font-size:0.9rem;color:var(--text);min-width:0;background:transparent}
@@ -147,10 +147,8 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 /* CATEGORIES */
 .catégories-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 .cat-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px 14px;text-align:center;cursor:pointer;transition:var(--transition);position:relative;overflow:hidden}
-.cat-card::before{display:none}
 .cat-card:hover{border-color:var(--warm-orange);box-shadow:var(--shadow-md)}
 .cat-card .icon{font-size:1.8rem;margin-bottom:8px}
-.cat-card:hover .icon{transform:none}
 .cat-card h3{font-size:0.82rem;font-weight:600;margin-bottom:2px;color:var(--text);position:relative;z-index:1}
 .cat-card span{font-size:0.75rem;color:var(--text-light);position:relative;z-index:1}
 @media(max-width:1024px){.catégories-grid{grid-template-columns:repeat(3,1fr)}}
@@ -228,8 +226,6 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 
 /* GWADA QUOTE */
 .gwada-quote{background:var(--warm-sand);border-radius:var(--radius);padding:28px;text-align:center;position:relative;overflow:hidden;border:1px solid var(--border)}
-.gwada-quote::before{display:none}
-.gwada-quote::after{display:none}
 .gwada-quote .proverb{font-family:'DM Serif Display',Georgia,serif;font-size:1.1rem;font-weight:400;color:var(--text);margin-bottom:6px;font-style:italic}
 .gwada-quote .translation{font-size:0.82rem;color:var(--text-light)}
 
@@ -285,12 +281,6 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 .page-section{display:none}.page-section.active{display:block}
 .text-center{text-align:center}
 
-@keyframes bounce-attention{
-  0%,20%,50%,80%,100%{transform:translateY(0)}
-  40%{transform:translateY(-12px)}
-  60%{transform:translateY(-6px)}
-}
-.chatbot-toggle:hover{transform:scale(1.05)}
 
 /* RESPONSIVE GRIDS */
 @media(max-width:1024px){
@@ -641,57 +631,14 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 
       <!-- FILTRES -->
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">
-        <select id="fCat" onchange="filterAnnuaire()" style="padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:0.88rem;background:#fff;flex:1;min-width:200px">
+        <select id="fCat" onchange="filterAnnuaire()" aria-label="Filtrer par catégorie" style="padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:0.88rem;background:#fff;flex:1;min-width:200px">
           <option value="">Toutes catégories</option>
-          <option value="Agents immobiliers">🏠 Agents immobiliers (20)</option>
-<option value="Architectes & BET">📐 Architectes & BET (12)</option>
-<option value="Décoration & Aménagement">🎨 Décoration & Aménagement (7)</option>
-<option value="Gros oeuvre & BTP">🏗️ Gros oeuvre & BTP (34)</option>
-<option value="Géomètres-experts">📏 Géomètres-experts (7)</option>
-<option value="Notaires & Juridique">⚖️ Notaires & Juridique (14)</option>
-<option value="Paysagistes & Extérieur">🌴 Paysagistes & Extérieur (10)</option>
-<option value="Second oeuvre">🔧 Second oeuvre (51)</option>
-<option value="Services financiers">💰 Services financiers (10)</option>
-<option value="Énergie & Climatisation">❄️ Énergie & Climatisation (10)</option>
-
         </select>
-        <select id="fSub" onchange="filterAnnuaire()" style="padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:0.88rem;background:#fff;flex:1;min-width:200px">
+        <select id="fSub" onchange="filterAnnuaire()" aria-label="Filtrer par sous-catégorie" style="padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:0.88rem;background:#fff;flex:1;min-width:200px">
           <option value="">Toutes sous-catégories</option>
         </select>
-        <select id="fCom" onchange="filterAnnuaire()" style="padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:0.88rem;background:#fff;flex:1;min-width:180px">
+        <select id="fCom" onchange="filterAnnuaire()" aria-label="Filtrer par commune" style="padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:0.88rem;background:#fff;flex:1;min-width:180px">
           <option value="">Toutes communes</option>
-          <option value="Anse-Bertrand">Anse-Bertrand (1)</option>
-<option value="Baie-Mahault">Baie-Mahault (67)</option>
-<option value="Baillif">Baillif (1)</option>
-<option value="Basse-Terre">Basse-Terre (5)</option>
-<option value="Bouillante">Bouillante (1)</option>
-<option value="Capesterre-Belle-Eau">Capesterre-Belle-Eau (6)</option>
-<option value="Capesterre-de-Marie-Galante">Capesterre-de-Marie-Galante (1)</option>
-<option value="Deshaies">Deshaies (1)</option>
-<option value="Gourbeyre">Gourbeyre (2)</option>
-<option value="Goyave">Goyave (2)</option>
-<option value="Grand-Bourg">Grand-Bourg (1)</option>
-<option value="La Désirade">La Désirade (1)</option>
-<option value="Lamentin">Lamentin (1)</option>
-<option value="Le Gosier">Le Gosier (15)</option>
-<option value="Le Moule">Le Moule (5)</option>
-<option value="Les Abymes">Les Abymes (16)</option>
-<option value="Morne-à-l'Eau">Morne-à-l'Eau (3)</option>
-<option value="Petit-Bourg">Petit-Bourg (7)</option>
-<option value="Petit-Canal">Petit-Canal (1)</option>
-<option value="Pointe-Noire">Pointe-Noire (1)</option>
-<option value="Pointe-à-Pitre">Pointe-à-Pitre (12)</option>
-<option value="Port-Louis">Port-Louis (1)</option>
-<option value="Saint-Claude">Saint-Claude (3)</option>
-<option value="Saint-François">Saint-François (6)</option>
-<option value="Saint-Louis">Saint-Louis (2)</option>
-<option value="Sainte-Anne">Sainte-Anne (7)</option>
-<option value="Terre-de-Bas">Terre-de-Bas (1)</option>
-<option value="Terre-de-Haut">Terre-de-Haut (1)</option>
-<option value="Trois-Rivières">Trois-Rivières (2)</option>
-<option value="Vieux-Fort">Vieux-Fort (1)</option>
-<option value="Vieux-Habitants">Vieux-Habitants (1)</option>
-
         </select>
         <input type="text" id="fSearch" onkeyup="filterAnnuaire()" placeholder="Recherche libre..." aria-label="Recherche libre dans l'annuaire" style="padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:0.88rem;background:#fff;flex:1;min-width:160px">
       </div>
@@ -999,7 +946,7 @@ function showCommune(communeName){
   catsEl.innerHTML=Object.entries(cats).sort((a,b)=>b[1]-a[1]).map(([c,n])=>{
     const emoji=catEmojisMap[c]||'📍';
     const color=catColorsMap[c]||'#666';
-    return '<button onclick="showCommuneCat(\''+communeName+'\',\''+c.replace(/'/g,"\\'")+'\')" style="padding:6px 14px;border-radius:50px;border:1px solid '+color+'30;background:'+color+'10;color:'+color+';font-size:0.8rem;font-weight:500;cursor:pointer;transition:all 0.2s" onmouseover="this.style.background=\''+color+'20\'" onmouseout="this.style.background=\''+color+'10\'">'+emoji+' '+c+' ('+n+')</button>';
+    return '<button data-commune="'+sanitize(communeName)+'" data-cat="'+sanitize(c)+'" onclick="showCommuneCat(this.dataset.commune,this.dataset.cat)" style="padding:6px 14px;border-radius:50px;border:1px solid '+color+'30;background:'+color+'10;color:'+color+';font-size:0.8rem;font-weight:500;cursor:pointer;transition:all 0.2s" onmouseover="this.style.background=\''+color+'20\'" onmouseout="this.style.background=\''+color+'10\'">'+emoji+' '+sanitize(c)+' ('+n+')</button>';
   }).join('');
 
   // Render artisan cards
@@ -1024,9 +971,9 @@ function renderCommuneList(pros){
     const emoji=catEmojisMap[p.c]||'📍';
     const color=catColorsMap[p.c]||'#666';
     const noteHtml=p.ng?'<span style="color:var(--warm-orange)">★ '+p.ng+'</span>'+((p.na&&p.na!=='0')?' <span style="color:var(--text-light);font-size:0.75rem">('+p.na+' avis)</span>':''):'';
-    const telHtml=p.t?'<div style="font-size:0.82rem;margin-top:6px">📞 <a href="tel:'+p.t.replace(/\s/g,'')+'" style="color:var(--warm-orange)">'+p.t+'</a></div>':'';
-    const webHtml=p.w?'<div style="font-size:0.82rem;margin-top:2px">🌐 <a href="https://'+p.w+'" target="_blank" rel="noopener" style="color:var(--ocean-blue)">'+p.w+'</a></div>':'';
-    const emailHtml=p.e?'<div style="font-size:0.82rem;margin-top:2px">✉️ <a href="mailto:'+p.e+'" style="color:var(--text-light)">'+p.e+'</a></div>':'';
+    const telHtml=p.t?'<div style="font-size:0.82rem;margin-top:6px">📞 <a href="tel:'+p.t.replace(/[^0-9+]/g,'')+'" style="color:var(--warm-orange)">'+sanitize(p.t)+'</a></div>':'';
+    const webHtml=p.w?'<div style="font-size:0.82rem;margin-top:2px">🌐 <a href="https://'+encodeURI(p.w)+'" target="_blank" rel="noopener noreferrer" style="color:var(--ocean-blue)">'+sanitize(p.w)+'</a></div>':'';
+    const emailHtml=p.e?'<div style="font-size:0.82rem;margin-top:2px">✉️ <a href="mailto:'+encodeURI(p.e)+'" style="color:var(--text-light)">'+sanitize(p.e)+'</a></div>':'';
 
     return '<div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;transition:all 0.3s" onmouseover="this.style.transform=\'translateY(-3px)\';this.style.boxShadow=\'0 8px 24px rgba(45,27,14,0.1)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'\'">'
       +'<div style="display:flex;justify-content:space-between;align-items:start">'
@@ -1073,24 +1020,7 @@ const sb=document.querySelector('.stats-banner');if(sb)statsObs.observe(sb);
 
 // CHATBOT
 function toggleChatbot(){document.getElementById('chatWindow').classList.toggle('active')}
-const prosDB=[
-  {nom:"Cabinet Morin Architecture",cat:"architecte",commune:"Le Gosier",tel:"0590 84 12 34",note:"4.8"},
-  {nom:"SARL Caraïbes BTP",cat:"maçon",commune:"Baie-Mahault",tel:"0590 26 80 00",note:"4.6"},
-  {nom:"Antilles Immo Conseil",cat:"agent immobilier",commune:"Saint-François",tel:"0590 88 50 00",note:"4.9"},
-  {nom:"EcoClimat 971",cat:"climatisation",commune:"Pointe-à-Pitre",tel:"0590 83 40 00",note:"4.7"},
-  {nom:"Les Plombiers Magiques",cat:"plombier",commune:"Pointe-à-Pitre",tel:"0690 55 00 00",note:"4.6"},
-  {nom:"Plomb'Carmont",cat:"plombier",commune:"Les Abymes",tel:"0690 44 00 00",note:"4.3"},
-  {nom:"ALUBAT 971",cat:"menuisier",commune:"Baie-Mahault",tel:"0590 26 35 00",note:"4.7"},
-  {nom:"BET HAUSS SARL",cat:"architecte",commune:"Baie-Mahault",tel:"0590 26 60 00",note:"4.6"},
-  {nom:"CLIMATIS",cat:"climatisation",commune:"Baie-Mahault",tel:"0590 26 65 00",note:"4.5"},
-  {nom:"Intense ID",cat:"décorateur",commune:"Les Abymes",tel:"0690 70 00 00",note:"4.8"},
-  {nom:"IMMOVITAL",cat:"agent immobilier",commune:"Baie-Mahault",tel:"0590 26 00 00",note:"4.5"},
-  {nom:"JÉKONOMIZ",cat:"courtier",commune:"Les Abymes",tel:"0590 20 90 00",note:"4.6"},
-  {nom:"Koté Piscine",cat:"pisciniste",commune:"Baie-Mahault",tel:"0590 26 75 00",note:"4.5"},
-  {nom:"Objectif Maison",cat:"constructeur",commune:"Baie-Mahault",tel:"0590 26 22 00",note:"4.5"},
-  {nom:"RENOVBAT",cat:"maçon",commune:"Sainte-Rose",tel:"0590 28 40 00",note:"4.5"}
-];
-// === TI KONSEY CHATBOT — Connected to 3000 real artisans ===
+// === TI KONSEY CHATBOT — Connected to real artisans data ===
 const chatKeywords={
   "plombier":["Plomberie","plombier"],
   "électricien":["Electricite","électricien","electricien","electrique"],
@@ -1314,8 +1244,6 @@ function updateCatCards(cats){
   });
 }
 
-const catEmojis = catEmojisMap;
-const catColors = catColorsMap;
 // catSubs computed dynamically from loaded data
 let catSubs = {};
 function buildCatSubs(){
@@ -1381,7 +1309,7 @@ function renderAnnuaire() {
     const avis = p.na ? ' (' + p.na + ' avis)' : '';
     const verified = p.v ? '<span style="background:#ecfdf5;color:#059669;padding:2px 8px;border-radius:50px;font-size:0.7rem;font-weight:600;margin-left:6px">✓ Vérifié</span>' : '';
     const siret = p.si ? '<span style="font-size:0.72rem;color:var(--text-light);margin-left:4px" title="SIRET: '+p.si+'">🏢</span>' : '';
-    const telBtn = p.t ? '<a href="tel:'+p.t.replace(/[^0-9+]/g,'')+'" style="padding:6px 14px;background:var(--warm-orange);color:#fff;border-radius:50px;font-size:0.78rem;font-weight:600;text-decoration:none">📞 '+p.t+'</a>' : '';
+    const telBtn = p.t ? '<a href="tel:'+p.t.replace(/[^0-9+]/g,'')+'" style="padding:6px 14px;background:var(--warm-orange);color:#fff;border-radius:50px;font-size:0.78rem;font-weight:600;text-decoration:none">📞 '+sanitize(p.t)+'</a>' : '';
     const emailBtn = p.e ? '<a href="mailto:'+p.e+'" style="padding:6px 14px;background:rgba(6,95,70,0.1);border:1px solid rgba(6,95,70,0.2);color:#065f46;border-radius:50px;font-size:0.78rem;font-weight:500;text-decoration:none">✉️ Email</a>' : '';
     const webBtn = p.w ? '<a href="'+(p.w.startsWith('http')?p.w:'https://'+p.w)+'" target="_blank" rel="noopener" style="padding:6px 14px;background:transparent;border:1px solid var(--border);color:var(--text);border-radius:50px;font-size:0.78rem;font-weight:500;text-decoration:none">🌐 Site</a>' : '';
 
@@ -1389,8 +1317,8 @@ function renderAnnuaire() {
     html += '<div style="width:50px;height:50px;border-radius:10px;background:'+color+';display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.9rem;flex-shrink:0">'+initials+'</div>';
     html += '<div style="flex:1;min-width:0">';
     html += '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap">';
-    html += '<div><h3 style="font-size:0.95rem;font-weight:600;margin-bottom:2px">'+p.n+verified+siret+'</h3>';
-    html += '<div style="font-size:0.8rem;color:var(--text-light)">'+emoji+' '+p.s+' · 📍 '+p.co+'</div></div>';
+    html += '<div><h3 style="font-size:0.95rem;font-weight:600;margin-bottom:2px">'+sanitize(p.n)+verified+siret+'</h3>';
+    html += '<div style="font-size:0.8rem;color:var(--text-light)">'+emoji+' '+sanitize(p.s)+' · 📍 '+sanitize(p.co)+'</div></div>';
     if (stars) html += '<div style="font-size:0.82rem;color:var(--warm-orange);white-space:nowrap">'+stars+avis+'</div>';
     html += '</div>';
     const btns = [telBtn,emailBtn,webBtn].filter(b=>b).join('');
@@ -1406,7 +1334,7 @@ function renderAnnuaire() {
   if(totalPages>1){
     const btnStyle = (active) => 'style="min-width:36px;height:36px;padding:0 8px;border-radius:8px;border:1px solid '+(active?'var(--warm-orange)':'var(--border)')+';background:'+(active?'var(--warm-orange)':'#fff')+';color:'+(active?'#fff':'var(--text)')+';cursor:pointer;font-size:0.85rem;font-weight:500"';
     // Prev button
-    if(currentPage>1) pagHtml+='<button onclick="currentPage='+(currentPage-1)+';renderAnnuaire();window.scrollTo({top:document.getElementById(\'annuaire\').offsetTop-80,behavior:\'smooth\'})" '+btnStyle(false)+'>←</button>';
+    if(currentPage>1) pagHtml+='<button onclick="currentPage='+(currentPage-1)+';renderAnnuaire();var _el=document.getElementById(\'annuaire\');if(_el)window.scrollTo({top:_el.offsetTop-80,behavior:\'smooth\'})" '+btnStyle(false)+'>←</button>';
     // Page numbers
     let pages=[];
     if(totalPages<=7){for(let i=1;i<=totalPages;i++)pages.push(i)}
@@ -1419,10 +1347,10 @@ function renderAnnuaire() {
     }
     pages.forEach(p=>{
       if(p==='...')pagHtml+='<span style="padding:0 4px;color:var(--text-light)">…</span>';
-      else pagHtml+='<button onclick="currentPage='+p+';renderAnnuaire();window.scrollTo({top:document.getElementById(\'annuaire\').offsetTop-80,behavior:\'smooth\'})" '+btnStyle(p===currentPage)+'>'+p+'</button>';
+      else pagHtml+='<button onclick="currentPage='+p+';renderAnnuaire();var _el=document.getElementById(\'annuaire\');if(_el)window.scrollTo({top:_el.offsetTop-80,behavior:\'smooth\'})" '+btnStyle(p===currentPage)+'>'+p+'</button>';
     });
     // Next button
-    if(currentPage<totalPages) pagHtml+='<button onclick="currentPage='+(currentPage+1)+';renderAnnuaire();window.scrollTo({top:document.getElementById(\'annuaire\').offsetTop-80,behavior:\'smooth\'})" '+btnStyle(false)+'>→</button>';
+    if(currentPage<totalPages) pagHtml+='<button onclick="currentPage='+(currentPage+1)+';renderAnnuaire();var _el=document.getElementById(\'annuaire\');if(_el)window.scrollTo({top:_el.offsetTop-80,behavior:\'smooth\'})" '+btnStyle(false)+'>→</button>';
   }
   document.getElementById('annPagination').innerHTML = pagHtml;
 }
@@ -1444,20 +1372,22 @@ const tkImages = {
 };
 // Preload all expressions
 Object.values(tkImages).forEach(src=>{const img=new Image();img.src=src});
-// Animate floating button — cycle through expressions
+// Animate floating button — cycle through expressions (pauses when tab hidden)
 (function(){
   const btnExpressions=['wave','welcome','happy','thumbsup','idea','found'];
-  let idx=0;
-  setInterval(()=>{
-    const btn=document.getElementById('tkBtnImg');
-    if(!btn)return;
-    idx=(idx+1)%btnExpressions.length;
-    btn.style.opacity='0.7';btn.style.transform='scale(0.9)';
-    setTimeout(()=>{
-      btn.src=tkImages[btnExpressions[idx]];
-      btn.style.opacity='1';btn.style.transform='scale(1)';
-    },300);
-  },3000);
+  let idx=0;let tid;
+  function cycle(){
+    tid=setInterval(()=>{
+      if(document.hidden)return;
+      const btn=document.getElementById('tkBtnImg');
+      if(!btn)return;
+      idx=(idx+1)%btnExpressions.length;
+      btn.style.opacity='0.7';btn.style.transform='scale(0.9)';
+      setTimeout(()=>{btn.src=tkImages[btnExpressions[idx]];btn.style.opacity='1';btn.style.transform='scale(1)'},300);
+    },3000);
+  }
+  cycle();
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInterval(tid)}else{cycle()}});
 })();
 // Animate Ti Konsey expression with smooth transition
 function setTkExpression(expr){
@@ -1474,11 +1404,7 @@ function setTkExpression(expr){
 
 // (duplicate removed — using animated version above)
 
-// MULTILINGUAL
-var chatLang='fr';
-function sL(e){document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.remove('active')});e.classList.add('active');chatLang=e.dataset.lang}
 
 </script>
-<div id="communeModal" style="display:none"></div>
 </body>
 </html>
