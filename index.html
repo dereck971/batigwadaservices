@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BatiGwadaServices — Annuaire BTP & Immobilier Guadeloupe 971 🌴</title>
-<meta name="description" content="Le plus grand annuaire du bâtiment et de l'immobilier en Guadeloupe. 3 000+ professionnels vérifiés dans 23 catégories et 32 communes. Trouvez artisans, architectes, agents immobiliers.">
+<meta name="description" content="Annuaire du bâtiment et de l'immobilier en Guadeloupe. 5 800+ professionnels identifiés dans 73 catégories et 73 communes. Trouvez artisans, architectes, agents immobiliers.">
 <meta name="keywords" content="annuaire BTP Guadeloupe, artisan Guadeloupe, architecte 971, plombier Guadeloupe, maçon Baie-Mahault, agent immobilier Guadeloupe, construction Guadeloupe">
 <meta name="author" content="BatiGwadaServices — Écosystème KCI">
 <meta name="robots" content="index, follow">
@@ -12,7 +12,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="BatiGwadaServices — Annuaire BTP Guadeloupe">
-<meta property="og:description" content="3 000+ professionnels du bâtiment et de l'immobilier en Guadeloupe. Trouvez le bon artisan en 2 clics.">
+<meta property="og:description" content="5 800+ professionnels du bâtiment et de l'immobilier en Guadeloupe. Trouvez le bon artisan en 2 clics.">
 <meta property="og:url" content="https://batigwadaservices.com/">
 <meta property="og:image" content="https://batigwadaservices.com/images/tk/avatar.png">
 <meta property="og:locale" content="fr_FR">
@@ -20,7 +20,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BatiGwadaServices — Annuaire BTP Guadeloupe">
-<meta name="twitter:description" content="3 000+ professionnels du bâtiment et de l'immobilier en Guadeloupe.">
+<meta name="twitter:description" content="5 800+ professionnels du bâtiment et de l'immobilier en Guadeloupe.">
 <meta name="twitter:image" content="https://batigwadaservices.com/images/tk/avatar.png">
 <meta name="theme-color" content="#e07a2f">
 <!-- Favicon -->
@@ -33,7 +33,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"BatiGwadaServices","url":"https://batigwadaservices.com/","description":"Annuaire BTP et immobilier en Guadeloupe — 3000+ professionnels","potentialAction":{"@type":"SearchAction","target":"https://batigwadaservices.com/?q={search_term_string}","query-input":"required name=search_term_string"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"BatiGwadaServices","url":"https://batigwadaservices.com/","description":"Annuaire BTP et immobilier en Guadeloupe — 5800+ professionnels identifiés","potentialAction":{"@type":"SearchAction","target":"https://batigwadaservices.com/?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"BatiGwadaServices","url":"https://batigwadaservices.com/","description":"Le plus grand annuaire du bâtiment en Guadeloupe","areaServed":{"@type":"Place","name":"Guadeloupe, France"},"parentOrganization":{"@type":"Organization","name":"Karukera Conseil Immobilier","url":"https://karuconseilimmo.com"}}
@@ -186,7 +186,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 
 /* KCI BANNER */
 .kci-banner{position:relative;padding:50px 0;color:#fff;overflow:hidden}
-.kci-banner-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d7?w=1600&q=80') center/cover}
+.kci-banner-bg{position:absolute;inset:0;background:linear-gradient(135deg,#065f46,#0e7c6b)}
 .kci-banner-overlay{position:absolute;inset:0;background:rgba(6,95,70,0.92)}
 .kci-banner .container{position:relative;z-index:2}
 .kci-banner h2{font-family:'DM Serif Display',Georgia,serif;font-size:1.8rem;margin-bottom:10px}
@@ -218,7 +218,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 
 /* STATS */
 .stats-banner{position:relative;padding:50px 0;color:#fff;overflow:hidden}
-.stats-banner-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=1600&q=80') center/cover}
+.stats-banner-bg{position:absolute;inset:0;background:linear-gradient(135deg,#111827,#1a1a2e)}
 .stats-banner-overlay{position:absolute;inset:0;background:rgba(17,24,39,0.88)}
 .stats-banner .container{position:relative;z-index:2}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
@@ -384,9 +384,9 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
         <button onclick="heroSearchGo()">Rechercher</button>
       </div>
       <div class="hero-badges">
-        <span><span class="dot"></span> <span id="heroBadgeCount">5 800+</span> professionnels</span>
-        <span><span class="dot"></span> 23 métiers</span>
-        <span><span class="dot"></span> 100% gratuit</span>
+        <span><span class="dot"></span> <span id="heroBadgeCount">5 800+</span> professionnels identifiés</span>
+        <span><span class="dot"></span> <span id="heroBadgeCats">73</span> catégories</span>
+        <span><span class="dot"></span> Recherche gratuite</span>
       </div>
     </div>
     <div class="hero-scroll"><span></span></div>
@@ -420,37 +420,22 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
       <h2 class="section-title serif">Construire aux quatre coins de l'archipel</h2>
       <p class="section-subtitle">De la côte Caraïbe aux plages de l'Atlantique — chaque commune a ses spécificités</p>
       <div class="places-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
-        <div class="img-card animate-on-scroll stagger-1" onclick="showCommune('Sainte-Anne')"><img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=75" alt="Sainte-Anne Guadeloupe" loading="lazy"><div class="overlay"><h3>Sainte-Anne</h3><p>Zone balnéaire premium</p></div></div>
-        <div class="img-card animate-on-scroll stagger-2" onclick="showCommune('Baie-Mahault')"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=75" alt="Baie-Mahault Guadeloupe" loading="lazy"><div class="overlay"><h3>Baie-Mahault</h3><p>Cœur économique</p></div></div>
-        <div class="img-card animate-on-scroll stagger-3" onclick="showCommune('Le Gosier')"><img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?w=600&q=75" alt="Le Gosier Guadeloupe" loading="lazy"><div class="overlay"><h3>Le Gosier</h3><p>Tourisme & résidentiel</p></div></div>
-        <div class="img-card animate-on-scroll stagger-4" onclick="showCommune('Saint-François')"><img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d7?w=600&q=75" alt="Saint-François Guadeloupe" loading="lazy"><div class="overlay"><h3>Saint-François</h3><p>Haut de gamme</p></div></div>
+        <div class="img-card animate-on-scroll stagger-1" onclick="showCommune('Les Abymes')" style="min-height:200px"><div style="width:100%;height:220px;background:linear-gradient(135deg,#1a1a2e,#2d1b0e);display:flex;align-items:center;justify-content:center;font-size:3rem">🏙️</div><div class="overlay"><h3>Les Abymes</h3><p id="comCount1">403 professionnels</p></div></div>
+        <div class="img-card animate-on-scroll stagger-2" onclick="showCommune('Baie-Mahault')" style="min-height:200px"><div style="width:100%;height:220px;background:linear-gradient(135deg,#0e3b2e,#1a5c3a);display:flex;align-items:center;justify-content:center;font-size:3rem">🏗️</div><div class="overlay"><h3>Baie-Mahault</h3><p id="comCount2">344 professionnels</p></div></div>
+        <div class="img-card animate-on-scroll stagger-3" onclick="showCommune('Le Gosier')" style="min-height:200px"><div style="width:100%;height:220px;background:linear-gradient(135deg,#0d3d5f,#1a6985);display:flex;align-items:center;justify-content:center;font-size:3rem">🌊</div><div class="overlay"><h3>Le Gosier</h3><p id="comCount3">264 professionnels</p></div></div>
+        <div class="img-card animate-on-scroll stagger-4" onclick="showCommune('Saint-François')" style="min-height:200px"><div style="width:100%;height:220px;background:linear-gradient(135deg,#4a2511,#7c3d1a);display:flex;align-items:center;justify-content:center;font-size:3rem">☀️</div><div class="overlay"><h3>Saint-François</h3><p id="comCount4">171 professionnels</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- PROS -->
+  <!-- PROS — generated dynamically from real JSON data -->
   <section class="section">
     <div class="container">
-      <div class="section-label">En vedette</div>
+      <div class="section-label">Meilleures notes Google</div>
       <h2 class="section-title serif">Professionnels les mieux notés</h2>
-      <p class="section-subtitle">Sélectionnés par notre équipe · Professionnels vérifiés</p>
-      <div class="pros-grid">
-        <div class="pro-card animate-on-scroll stagger-1">
-          <div class="pro-card-img"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=75" alt="Architecture"></div>
-          <div class="pro-card-body"><h3>Cabinet Morin Architecture</h3><div class="category">Architecte DPLG</div><div class="location">📍 Le Gosier</div><div class="rating"><span class="stars">★★★★★</span> 4.8 (23 avis)</div><span class="badge badge-verified">Vérifié ✓</span></div>
-        </div>
-        <div class="pro-card animate-on-scroll stagger-2">
-          <div class="pro-card-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=75" alt="BTP"></div>
-          <div class="pro-card-body"><h3>SARL Caraïbes BTP</h3><div class="category">Maçonnerie / Gros œuvre</div><div class="location">📍 Baie-Mahault</div><div class="rating"><span class="stars">★★★★★</span> 4.6 (41 avis)</div><span class="badge badge-premium">Premium ★</span></div>
-        </div>
-        <div class="pro-card animate-on-scroll stagger-3">
-          <div class="pro-card-img"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=75" alt="Immobilier"></div>
-          <div class="pro-card-body"><h3>Antilles Immo Conseil</h3><div class="category">Agent immobilier</div><div class="location">📍 Saint-François</div><div class="rating"><span class="stars">★★★★★</span> 4.9 (67 avis)</div><span class="badge badge-verified">Vérifié ✓</span></div>
-        </div>
-        <div class="pro-card animate-on-scroll stagger-4">
-          <div class="pro-card-img"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&q=75" alt="Climatisation"></div>
-          <div class="pro-card-body"><h3>EcoClimat 971</h3><div class="category">Climatisation / Solaire</div><div class="location">📍 Pointe-à-Pitre</div><div class="rating"><span class="stars">★★★★★</span> 4.7 (15 avis)</div><span class="badge badge-verified">Vérifié ✓</span></div>
-        </div>
+      <p class="section-subtitle">Classement par note Google · Données publiques · 10+ avis minimum</p>
+      <div class="pros-grid" id="topProsGrid">
+        <div style="text-align:center;padding:40px;color:var(--text-light);grid-column:1/-1">Chargement des professionnels...</div>
       </div>
     </div>
   </section>
@@ -482,15 +467,15 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
       <p class="section-subtitle">Guides et analyses pour construire et investir en Guadeloupe 🌴</p>
       <div class="articles-grid">
         <div class="article-card animate-on-scroll stagger-1">
-          <div class="article-card-img"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=75" alt="Construction"></div>
+          <div class="article-card-img" style="background:linear-gradient(135deg,#d97706,#e07a2f);display:flex;align-items:center;justify-content:center;font-size:3rem;height:200px">🏗️</div>
           <div class="article-card-body"><span class="article-tag tag-construction">Construction</span><h3>Construire en Guadeloupe en 2026 : coûts réels et pièges à éviter</h3><p class="excerpt">De 1 200 à 2 500€/m² selon le type. Analyse complète des surcoûts zone sismique 5.</p><div class="article-meta">15 mars 2026 · Par la rédaction BatiGwadaServices</div></div>
         </div>
         <div class="article-card animate-on-scroll stagger-2">
-          <div class="article-card-img"><img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&q=75" alt="Investissement"></div>
+          <div class="article-card-img" style="background:linear-gradient(135deg,#059669,#0e7c6b);display:flex;align-items:center;justify-content:center;font-size:3rem;height:200px">💰</div>
           <div class="article-card-body"><span class="article-tag tag-investissement">Investissement</span><h3>Rentabilité locative par secteur : les chiffres réels 2026</h3><p class="excerpt">Loyer moyen 16€/m², +21% en 2 ans. Où investir pour maximiser son rendement.</p><div class="article-meta">12 mars 2026 · Par la rédaction BatiGwadaServices</div></div>
         </div>
         <div class="article-card animate-on-scroll stagger-3">
-          <div class="article-card-img"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=75" alt="Urbanisme"></div>
+          <div class="article-card-img" style="background:linear-gradient(135deg,#b45309,#d4a017);display:flex;align-items:center;justify-content:center;font-size:3rem;height:200px">🏛️</div>
           <div class="article-card-body"><span class="article-tag tag-urbanisme">Urbanisme</span><h3>PLU en Guadeloupe : vérifier la constructibilité par commune</h3><p class="excerpt">28 communes ont un PLU. Zones U, AU, N, A : ce qu'elles signifient.</p><div class="article-meta">8 mars 2026 · Par la rédaction BatiGwadaServices</div></div>
         </div>
       </div>
@@ -510,46 +495,42 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 
     <div class="container" style="position:relative;z-index:2">
       <div style="text-align:center;margin-bottom:50px">
-        <div style="display:inline-block;background:rgba(224,122,47,0.15);border:1px solid rgba(224,122,47,0.3);padding:6px 18px;border-radius:50px;font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#e07a2f;margin-bottom:16px">La base de donnees la plus complete de Guadeloupe</div>
+        <div style="display:inline-block;background:rgba(224,122,47,0.15);border:1px solid rgba(224,122,47,0.3);padding:6px 18px;border-radius:50px;font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#e07a2f;margin-bottom:16px">La base de données la plus complète de Guadeloupe</div>
         <h2 style="font-family:'DM Serif Display',Georgia,serif;font-size:2.4rem;font-weight:700;margin-bottom:12px;line-height:1.15">5 800+ professionnels référencés<br><span style="color:#d4a017">dans les 73 communes</span> de l'archipel</h2>
-        <p style="color:rgba(255,255,255,0.6);max-width:600px;margin:0 auto;font-size:0.95rem">Constituee à partir de 17 sources différentes — Google, Pages Jaunes, Facebook, Instagram, CCI, Ordres professionnels, Societe.com, et plus encore.</p>
+        <p style="color:rgba(255,255,255,0.6);max-width:600px;margin:0 auto;font-size:0.95rem">Constituée à partir de 33 sources différentes — Google, Pages Jaunes, Facebook, Instagram, CMA, data.gouv.fr, Societe.com, notaires.fr et plus encore.</p>
       </div>
 
       <!-- Big animated counters -->
-      <div class="hero-stats-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:50px;text-align:center">
+      <div class="hero-stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:50px;text-align:center">
         <div class="animate-on-scroll stagger-1" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:28px 12px">
-          <div style="font-family:'DM Serif Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#e07a2f;line-height:1" data-count="5862" id="heroStatPros">5 862</div>
-          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:6px">Professionnels</div>
+          <div style="font-family:'DM Serif Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#e07a2f;line-height:1" id="heroStatPros">5 862</div>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:6px">Professionnels identifiés</div>
         </div>
         <div class="animate-on-scroll stagger-2" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:28px 12px">
-          <div style="font-family:'DM Serif Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#d4a017;line-height:1">73<span style="font-size:1rem;opacity:0.5"> communes</span></div>
-          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:6px">Communes</div>
+          <div style="font-family:'DM Serif Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#d4a017;line-height:1" id="heroStatComs">73</div>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:6px">Communes couvertes</div>
         </div>
         <div class="animate-on-scroll stagger-3" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:28px 12px">
-          <div style="font-family:'DM Serif Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#e07a2f;line-height:1">101</div>
-          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:6px">Spécialités</div>
+          <div style="font-family:'DM Serif Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#e07a2f;line-height:1" id="heroStatCats">73</div>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:6px">Catégories métiers</div>
         </div>
         <div class="animate-on-scroll stagger-4" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:28px 12px">
-          <div style="font-family:'DM Serif Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#d4a017;line-height:1">17</div>
-          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:6px">Sources vérifiées</div>
-        </div>
-        <div class="animate-on-scroll" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:28px 12px">
-          <div style="font-family:'DM Serif Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#e07a2f;line-height:1">4.4<span style="font-size:1rem;opacity:0.5">/5</span></div>
-          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:6px">Note moyenne</div>
+          <div style="font-family:'DM Serif Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#d4a017;line-height:1">33</div>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:6px">Sources collectées</div>
         </div>
       </div>
 
       <!-- Category breakdown - visual bars -->
       <div class="breakdown-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:40px">
         <div>
-          <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;color:rgba(255,255,255,0.8)">Répartition par metier</h3>
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;color:rgba(255,255,255,0.8)">Répartition par métier</h3>
           <div style="display:flex;flex-direction:column;gap:8px">
             <div class="animate-on-scroll stagger-1"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>🔧 Second œuvre</span><span style="color:#e07a2f;font-weight:600">51</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:100%;height:100%;background:linear-gradient(90deg,#e07a2f,#e8634a);border-radius:3px"></div></div></div>
             <div class="animate-on-scroll stagger-2"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>🏗️ Gros œuvre & BTP</span><span style="color:#d97706;font-weight:600">34</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:67%;height:100%;background:linear-gradient(90deg,#d97706,#f59e0b);border-radius:3px"></div></div></div>
             <div class="animate-on-scroll stagger-3"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>🏠 Agents immobiliers</span><span style="color:#7c3aed;font-weight:600">20</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:39%;height:100%;background:linear-gradient(90deg,#7c3aed,#a855f7);border-radius:3px"></div></div></div>
             <div class="animate-on-scroll stagger-4"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>⚖️ Notaires & Juridique</span><span style="color:#0891b2;font-weight:600">14</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:27%;height:100%;background:linear-gradient(90deg,#0891b2,#22d3ee);border-radius:3px"></div></div></div>
             <div class="animate-on-scroll"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>📐 Architectes & BET</span><span style="color:#2563eb;font-weight:600">12</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:24%;height:100%;background:linear-gradient(90deg,#2563eb,#60a5fa);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll stagger-1"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>🌴 Paysagistes & Exterieur</span><span style="color:#16a34a;font-weight:600">11</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:22%;height:100%;background:linear-gradient(90deg,#16a34a,#4ade80);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll stagger-1"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>🌴 Paysagistes & Extérieur</span><span style="color:#16a34a;font-weight:600">11</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:22%;height:100%;background:linear-gradient(90deg,#16a34a,#4ade80);border-radius:3px"></div></div></div>
             <div class="animate-on-scroll stagger-2"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>❄️ Énergie & Climatisation</span><span style="color:#0ea5e9;font-weight:600">11</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:22%;height:100%;background:linear-gradient(90deg,#0ea5e9,#67e8f9);border-radius:3px"></div></div></div>
             <div class="animate-on-scroll stagger-3"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>💰 Services financiers</span><span style="color:#059669;font-weight:600">10</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:20%;height:100%;background:linear-gradient(90deg,#059669,#34d399);border-radius:3px"></div></div></div>
           </div>
@@ -558,13 +539,13 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
         <div>
           <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;color:rgba(255,255,255,0.8)">Top communes</h3>
           <div style="display:flex;flex-direction:column;gap:8px">
-            <div class="animate-on-scroll stagger-1"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Baie-Mahault</span><span style="color:#e07a2f;font-weight:600">67 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:100%;height:100%;background:linear-gradient(90deg,#e07a2f,#d4a017);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll stagger-2"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Les Abymes</span><span style="color:#d4a017;font-weight:600">17 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:25%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll stagger-3"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Le Gosier</span><span style="color:#d4a017;font-weight:600">15 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:22%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll stagger-4"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Pointe-a-Pitre</span><span style="color:#d4a017;font-weight:600">12 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:18%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Petit-Bourg</span><span style="color:#d4a017;font-weight:600">7 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:10%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll stagger-1"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Saint-Francois</span><span style="color:#d4a017;font-weight:600">6 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:9%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
-            <div class="animate-on-scroll stagger-2"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span style="opacity:0.5">+ 25 autres communes...</span><span style="color:rgba(255,255,255,0.3)"></span></div></div>
+            <div class="animate-on-scroll stagger-1"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Les Abymes</span><span style="color:#e07a2f;font-weight:600">403 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:100%;height:100%;background:linear-gradient(90deg,#e07a2f,#d4a017);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll stagger-2"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Baie-Mahault</span><span style="color:#d4a017;font-weight:600">344 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:85%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll stagger-3"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Le Gosier</span><span style="color:#d4a017;font-weight:600">264 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:65%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll stagger-4"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Petit-Bourg</span><span style="color:#d4a017;font-weight:600">188 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:47%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Pointe-à-Pitre</span><span style="color:#d4a017;font-weight:600">181 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:45%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll stagger-1"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span>Saint-François</span><span style="color:#d4a017;font-weight:600">171 pros</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden"><div style="width:42%;height:100%;background:linear-gradient(90deg,#d4a017,#fbbf24);border-radius:3px"></div></div></div>
+            <div class="animate-on-scroll stagger-2"><div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:3px"><span style="opacity:0.5">+ 67 autres communes...</span><span style="color:rgba(255,255,255,0.3)"></span></div></div>
           </div>
         </div>
       </div>
@@ -621,7 +602,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
           </div>
           <!-- +8 autres -->
           <div style="background:rgba(255,255,255,0.04);border:1px dashed rgba(255,255,255,0.1);border-radius:12px;padding:10px 16px;display:flex;align-items:center;gap:6px">
-            <span style="font-size:0.75rem;color:rgba(255,255,255,0.4)">+ 8 autres sources</span>
+            <span style="font-size:0.75rem;color:rgba(255,255,255,0.4)">+ 24 autres sources</span>
           </div>
         </div>
       </div>
@@ -639,10 +620,10 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
     <div class="stats-banner-overlay"></div>
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-item animate-on-scroll stagger-1"><div class="number" data-target="5862">0</div><div class="label">Professionnels référencés</div></div>
-        <div class="stat-item animate-on-scroll stagger-2"><div class="number" data-target="73">0</div><div class="label">Communes</div></div>
-        <div class="stat-item animate-on-scroll stagger-3"><div class="number" data-target="10000">0</div><div class="label">Recherches / mois</div></div>
-        <div class="stat-item animate-on-scroll stagger-4"><div class="number" data-target="4.8" data-decimal="true">0</div><div class="label">Note moyenne</div></div>
+        <div class="stat-item animate-on-scroll stagger-1"><div class="number" data-target="5862">0</div><div class="label">Professionnels identifiés</div></div>
+        <div class="stat-item animate-on-scroll stagger-2"><div class="number" data-target="73">0</div><div class="label">Communes couvertes</div></div>
+        <div class="stat-item animate-on-scroll stagger-3"><div class="number" data-target="73">0</div><div class="label">Catégories métiers</div></div>
+        <div class="stat-item animate-on-scroll stagger-4"><div class="number" data-target="33">0</div><div class="label">Sources collectées</div></div>
       </div>
     </div>
   </section>
@@ -803,7 +784,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 <section class="section" style="padding-top:100px">
 <div class="container">
   <a href="#annuaire" onclick="event.preventDefault();showSection('annuaire')" style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--warm-orange);margin-bottom:20px">← Retour à l'annuaire</a>
-  <h2 class="section-title serif" id="communeTitle">Artisans à ...</h2>
+  <h2 class="section-title serif" id="communeTitle">Professionnels</h2>
   <p class="section-subtitle" id="communeSubtitle"></p>
 
   <!-- Category breakdown -->
@@ -821,7 +802,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 <div class="container" style="text-align:center">
   <div class="section-label">Professionnels du BTP</div>
   <h2 class="section-title serif">Développez votre visibilité en Guadeloupe</h2>
-  <p class="section-subtitle">On aide les artisans de Guadeloupe à se faire connaître — rejoignez 5 800+ professionnels référencés</p>
+  <p class="section-subtitle">On aide les artisans de Guadeloupe à se faire connaître — rejoignez 5 800+ professionnels déjà identifiés</p>
 
   <div class="pricing-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:960px;margin:40px auto 0;text-align:left">
 
@@ -884,6 +865,76 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 </section>
 </div>
 
+<!-- ====== MENTIONS LÉGALES ====== -->
+<div class="page-section" id="mentions">
+<section class="section" style="padding-top:100px">
+<div class="container" style="max-width:800px">
+  <a href="#accueil" onclick="event.preventDefault();showSection('accueil')" style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--warm-orange);margin-bottom:20px">← Retour à l'accueil</a>
+  <h2 class="section-title serif">Mentions légales</h2>
+  <div style="font-size:0.9rem;color:var(--text);line-height:1.8;margin-top:24px">
+    <h3 style="font-size:1rem;font-weight:600;margin:20px 0 8px">Éditeur du site</h3>
+    <p>BatiGwadaServices est édité par <strong>Karukera Conseil Immobilier (KCI)</strong>.<br>
+    Adresse : Guadeloupe (971), France<br>
+    Email : contact@batigwadaservices.com<br>
+    Directeur de la publication : Karukera Conseil Immobilier</p>
+    <h3 style="font-size:1rem;font-weight:600;margin:20px 0 8px">Hébergement</h3>
+    <p>Ce site est hébergé par <strong>Vercel Inc.</strong><br>
+    440 N Bashaw St, San Francisco, CA 94107, États-Unis.</p>
+    <h3 style="font-size:1rem;font-weight:600;margin:20px 0 8px">Propriété intellectuelle</h3>
+    <p>L'ensemble du contenu de ce site (textes, images, logos) est protégé par le droit d'auteur. Toute reproduction est interdite sans autorisation préalable.</p>
+    <h3 style="font-size:1rem;font-weight:600;margin:20px 0 8px">Données professionnelles</h3>
+    <p>Les informations affichées dans l'annuaire proviennent de sources publiques (Google, Pages Jaunes, data.gouv.fr, réseaux sociaux, etc.). Si vous êtes un professionnel et souhaitez modifier ou supprimer votre fiche, contactez-nous à contact@batigwadaservices.com.</p>
+    <h3 style="font-size:1rem;font-weight:600;margin:20px 0 8px">Limitation de responsabilité</h3>
+    <p>BatiGwadaServices s'efforce de fournir des informations exactes mais ne garantit pas l'exhaustivité ou l'actualité des données. L'annuaire est un outil d'aide à la recherche, il appartient à l'utilisateur de vérifier les informations directement auprès des professionnels.</p>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ====== CONFIDENTIALITÉ ====== -->
+<div class="page-section" id="confidentialite">
+<section class="section" style="padding-top:100px">
+<div class="container" style="max-width:800px">
+  <a href="#accueil" onclick="event.preventDefault();showSection('accueil')" style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--warm-orange);margin-bottom:20px">← Retour à l'accueil</a>
+  <h2 class="section-title serif">Politique de confidentialité</h2>
+  <div style="font-size:0.9rem;color:var(--text);line-height:1.8;margin-top:24px">
+    <h3 style="font-size:1rem;font-weight:600;margin:20px 0 8px">Responsable du traitement</h3>
+    <p>Karukera Conseil Immobilier — contact@batigwadaservices.com</p>
+    <h3 style="font-size:1rem;font-weight:600;margin:20px 0 8px">Données collectées</h3>
+    <p>Ce site ne collecte aucune donnée personnelle des visiteurs via des formulaires ou cookies de suivi. Les seules données affichées concernent des professionnels du BTP dont les informations sont publiquement disponibles.</p>
+    <h3 style="font-size:1rem;font-weight:600;margin:20px 0 8px">Cookies</h3>
+    <p>Ce site n'utilise pas de cookies de tracking ou publicitaires. Seuls des cookies techniques essentiels au fonctionnement du site peuvent être utilisés.</p>
+    <h3 style="font-size:1rem;font-weight:600;margin:20px 0 8px">Droits des professionnels référencés</h3>
+    <p>Conformément au RGPD, tout professionnel référencé dans l'annuaire peut exercer son droit d'accès, de rectification ou de suppression en envoyant un email à contact@batigwadaservices.com. Nous traitons les demandes sous 72h.</p>
+    <h3 style="font-size:1rem;font-weight:600;margin:20px 0 8px">Hébergement des données</h3>
+    <p>Les données sont hébergées par Vercel Inc. (États-Unis), dans le cadre des clauses contractuelles types de la Commission européenne.</p>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ====== CONTACT ====== -->
+<div class="page-section" id="contact">
+<section class="section" style="padding-top:100px">
+<div class="container" style="max-width:800px;text-align:center">
+  <a href="#accueil" onclick="event.preventDefault();showSection('accueil')" style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--warm-orange);margin-bottom:20px">← Retour à l'accueil</a>
+  <h2 class="section-title serif">Contact</h2>
+  <p class="section-subtitle">Une question, une demande de modification de fiche, un partenariat ?</p>
+  <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:40px;margin-top:24px;text-align:left">
+    <p style="font-size:0.95rem;line-height:2;color:var(--text)">
+      <strong>Email :</strong> contact@batigwadaservices.com<br>
+      <strong>Projet porté par :</strong> Karukera Conseil Immobilier (KCI)<br>
+      <strong>Localisation :</strong> Guadeloupe (971), France<br>
+      <strong>Délai de réponse :</strong> 48h ouvrées
+    </p>
+    <div style="margin-top:24px;padding:16px;background:var(--warm-sand);border-radius:var(--radius-sm);font-size:0.88rem;color:var(--text-light)">
+      <strong>Professionnels :</strong> pour modifier ou supprimer votre fiche, envoyez un email avec le nom de votre entreprise et la modification souhaitée.
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
 <!-- CHATBOT -->
 <button class="chatbot-toggle" onclick="toggleChatbot()" id="chatToggle" title="Ti Konsey — Votre assistante" style="width:86px;height:86px;border-radius:50%;background:transparent;padding:0;border:3px solid #fff;box-shadow:0 6px 28px rgba(224,122,47,0.5);overflow:hidden;position:fixed;bottom:24px;right:24px;z-index:1001;cursor:pointer">
   <span class="pulse"></span>
@@ -910,10 +961,10 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;border:none;o
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div><h4>BatiGwadaServices 🌴</h4><p>Le premier annuaire des professionnels de l'immobilier et du BTP en Guadeloupe. Votre annuaire de confiance — en Guadeloupe.</p><div class="footer-socials"><a href="#">FB</a><a href="#">IG</a><a href="#">LI</a></div></div>
-      <div><h4>L'annuaire</h4><ul><li><a href="#">Architectes & BET</a></li><li><a href="#">Gros œuvre & BTP</a></li><li><a href="#">Second œuvre</a></li><li><a href="#">Agents immobiliers</a></li><li><a href="#">Toutes catégories</a></li></ul></div>
+      <div><h4>BatiGwadaServices 🌴</h4><p>Annuaire des professionnels de l'immobilier et du BTP en Guadeloupe. 5 800+ professionnels identifiés dans 73 communes.</p></div>
+      <div><h4>L'annuaire</h4><ul><li><a href="#annuaire" onclick="event.preventDefault();showSection('annuaire')">Architectes & BET</a></li><li><a href="#annuaire" onclick="event.preventDefault();showSection('annuaire')">Gros œuvre & BTP</a></li><li><a href="#annuaire" onclick="event.preventDefault();showSection('annuaire')">Second œuvre</a></li><li><a href="#annuaire" onclick="event.preventDefault();showSection('annuaire')">Toutes catégories</a></li></ul></div>
       <div><h4>KCI</h4><ul><li><a href="#kci" onclick="event.preventDefault();showSection('kci')">Essentielle 49€</a></li><li><a href="#kci" onclick="event.preventDefault();showSection('kci')">Complète 129€</a></li><li><a href="#kci" onclick="event.preventDefault();showSection('kci')">Premium 299€</a></li></ul></div>
-      <div><h4>Informations</h4><ul><li><a href="#">À propos</a></li><li><a href="#">Contact</a></li><li><a href="#">Mentions légales</a></li><li><a href="#">Confidentialité</a></li></ul></div>
+      <div><h4>Informations</h4><ul><li><a href="#mentions" onclick="event.preventDefault();showSection('mentions')">Mentions légales</a></li><li><a href="#confidentialite" onclick="event.preventDefault();showSection('confidentialite')">Confidentialité</a></li><li><a href="#contact" onclick="event.preventDefault();showSection('contact')">Contact</a></li></ul></div>
     </div>
     <div class="footer-bottom">© 2026 BatiGwadaServices — L'annuaire BTP de la Guadeloupe 🌺</div>
   </div>
@@ -1168,15 +1219,15 @@ showSection('accueil');
 
 // ========== ANNUAIRE DATA (loaded from JSON) ==========
 let allPros = [];
-const catEmojisMap = {"Agents immobiliers":"🏠","Agences immobilières":"🏠","Administrateurs de biens":"🏠","Conciergeries":"🏠","Conciergeries / Gestion locative":"🏠","Promoteurs immobiliers":"🏠","Syndics de copropriété":"🏠","Architectes & BET":"📐","Architectes":"📐","Architecture":"📐","Bureaux d'études":"📐","Bureaux d'études / Ingénierie":"📐","Décoration & Aménagement":"🎨","Decoration & Amenagement":"🎨","Décorateurs / Architectes d'intérieur":"🎨","Cuisinistes":"🎨","Salles de bains":"🎨","Gros oeuvre & BTP":"🏗️","Béton / Matériaux":"🏗️","Charpentiers":"🏗️","Charpentiers / Couvreurs":"🏗️","Couvreurs":"🏗️","Démolition / Déconstruction":"🏗️","Étanchéité":"🏗️","Assainissement":"🏗️","Forage":"🏗️","Géomètres-experts":"📏","Geometres-experts":"📏","Notaires & Juridique":"⚖️","Notaires":"⚖️","Diagnostiqueurs immobiliers":"⚖️","Expertise Immobilière":"⚖️","Paysagistes & Extérieur":"🌴","Paysagistes & Exterieur":"🌴","Paysagistes":"🌴","Jardiniers / Espaces verts":"🌴","Piscinistes":"🌴","Piscines":"🌴","Piscines & Assainissement":"🌴","Portails / Clôtures":"🌴","Second oeuvre":"🔧","Electricite":"⚡","Maconnerie":"🧱","Plomberie":"🔧","Peinture":"🎨","Menuiserie":"🪚","Terrassement":"🚜","Terrassement / VRD":"🚜","Couverture et etancheite":"🏠","Isolation":"🧊","Plaquistes / Plâtriers":"🔧","Ravalement / Façades":"🎨","Serruriers & Métalliers":"🔧","Serruriers & Metalliers":"🔧","Serruriers / Métalliers":"🔧","Métalliers / Serruriers":"🔧","Vitriers / Miroitiers":"🪟","Stores / Volets":"🪟","Domotique / Alarmes":"🔌","Ascenseurs":"🔧","Services financiers":"💰","Location matériel BTP":"💰","Matériaux de construction":"💰","Nettoyage / Entretien":"🧹","Débarras / Nettoyage":"🧹","Déménagement":"📦","Garde-meubles / Stockage":"📦","Dératisation / Désinsectisation":"🐛","Énergie & Climatisation":"❄️","Energie & Climatisation":"❄️","Climatisation / Froid":"❄️","Énergie Solaire / Photovoltaïque":"☀️","Énergie solaire / Photovoltaïque":"☀️"};
-const catColorsMap = {"Agents immobiliers":"#7c3aed","Agences immobilières":"#7c3aed","Administrateurs de biens":"#7c3aed","Conciergeries":"#7c3aed","Conciergeries / Gestion locative":"#7c3aed","Promoteurs immobiliers":"#7c3aed","Syndics de copropriété":"#7c3aed","Architectes & BET":"#2563eb","Architectes":"#2563eb","Architecture":"#2563eb","Bureaux d'études":"#2563eb","Bureaux d'études / Ingénierie":"#2563eb","Décoration & Aménagement":"#be185d","Decoration & Amenagement":"#be185d","Décorateurs / Architectes d'intérieur":"#be185d","Cuisinistes":"#be185d","Salles de bains":"#be185d","Gros oeuvre & BTP":"#d97706","Béton / Matériaux":"#d97706","Charpentiers":"#d97706","Charpentiers / Couvreurs":"#d97706","Couvreurs":"#d97706","Démolition / Déconstruction":"#d97706","Étanchéité":"#d97706","Assainissement":"#d97706","Forage":"#d97706","Géomètres-experts":"#16a34a","Geometres-experts":"#16a34a","Notaires & Juridique":"#0891b2","Notaires":"#0891b2","Diagnostiqueurs immobiliers":"#0891b2","Expertise Immobilière":"#0891b2","Paysagistes & Extérieur":"#059669","Paysagistes & Exterieur":"#059669","Paysagistes":"#059669","Jardiniers / Espaces verts":"#059669","Piscinistes":"#059669","Piscines":"#059669","Piscines & Assainissement":"#059669","Portails / Clôtures":"#059669","Second oeuvre":"#e07a2f","Electricite":"#f59e0b","Maconnerie":"#92400e","Plomberie":"#0284c7","Peinture":"#c026d3","Menuiserie":"#a16207","Terrassement":"#4d7c0f","Terrassement / VRD":"#4d7c0f","Couverture et etancheite":"#9f1239","Isolation":"#6366f1","Plaquistes / Plâtriers":"#e07a2f","Ravalement / Façades":"#c026d3","Serruriers & Métalliers":"#e07a2f","Serruriers & Metalliers":"#e07a2f","Serruriers / Métalliers":"#e07a2f","Métalliers / Serruriers":"#e07a2f","Vitriers / Miroitiers":"#0891b2","Stores / Volets":"#0891b2","Domotique / Alarmes":"#f59e0b","Ascenseurs":"#e07a2f","Services financiers":"#065f46","Location matériel BTP":"#065f46","Matériaux de construction":"#065f46","Nettoyage / Entretien":"#059669","Débarras / Nettoyage":"#059669","Déménagement":"#065f46","Garde-meubles / Stockage":"#065f46","Dératisation / Désinsectisation":"#92400e","Énergie & Climatisation":"#0ea5e9","Energie & Climatisation":"#0ea5e9","Climatisation / Froid":"#0ea5e9","Énergie Solaire / Photovoltaïque":"#f59e0b","Énergie solaire / Photovoltaïque":"#f59e0b"};
+const catEmojisMap = {"Agents immobiliers":"🏠","Agences immobilières":"🏠","Administrateurs de biens":"🏠","Conciergeries":"🏠","Conciergeries / Gestion locative":"🏠","Promoteurs immobiliers":"🏠","Syndics de copropriété":"🏠","Architectes & BET":"📐","Architectes":"📐","Architecture":"📐","Bureaux d'études":"📐","Bureaux d'études / Ingénierie":"📐","Décoration & Aménagement":"🎨","Decoration & Amenagement":"🎨","Décorateurs / Architectes d'intérieur":"🎨","Cuisinistes":"🎨","Salles de bains":"🎨","Gros oeuvre & BTP":"🏗️","Béton / Matériaux":"🏗️","Charpentiers":"🏗️","Charpentiers / Couvreurs":"🏗️","Couvreurs":"🏗️","Démolition / Déconstruction":"🏗️","Étanchéité":"🏗️","Assainissement":"🏗️","Forage":"🏗️","Géomètres-experts":"📏","Geometres-experts":"📏","Notaires & Juridique":"⚖️","Notaires":"⚖️","Diagnostiqueurs immobiliers":"⚖️","Expertise Immobilière":"⚖️","Paysagistes & Extérieur":"🌴","Paysagistes & Extérieur":"🌴","Paysagistes":"🌴","Jardiniers / Espaces verts":"🌴","Piscinistes":"🌴","Piscines":"🌴","Piscines & Assainissement":"🌴","Portails / Clôtures":"🌴","Second oeuvre":"🔧","Electricite":"⚡","Maconnerie":"🧱","Plomberie":"🔧","Peinture":"🎨","Menuiserie":"🪚","Terrassement":"🚜","Terrassement / VRD":"🚜","Couverture et etancheite":"🏠","Isolation":"🧊","Plaquistes / Plâtriers":"🔧","Ravalement / Façades":"🎨","Serruriers & Métalliers":"🔧","Serruriers & Metalliers":"🔧","Serruriers / Métalliers":"🔧","Métalliers / Serruriers":"🔧","Vitriers / Miroitiers":"🪟","Stores / Volets":"🪟","Domotique / Alarmes":"🔌","Ascenseurs":"🔧","Services financiers":"💰","Location matériel BTP":"💰","Matériaux de construction":"💰","Nettoyage / Entretien":"🧹","Débarras / Nettoyage":"🧹","Déménagement":"📦","Garde-meubles / Stockage":"📦","Dératisation / Désinsectisation":"🐛","Énergie & Climatisation":"❄️","Energie & Climatisation":"❄️","Climatisation / Froid":"❄️","Énergie Solaire / Photovoltaïque":"☀️","Énergie solaire / Photovoltaïque":"☀️"};
+const catColorsMap = {"Agents immobiliers":"#7c3aed","Agences immobilières":"#7c3aed","Administrateurs de biens":"#7c3aed","Conciergeries":"#7c3aed","Conciergeries / Gestion locative":"#7c3aed","Promoteurs immobiliers":"#7c3aed","Syndics de copropriété":"#7c3aed","Architectes & BET":"#2563eb","Architectes":"#2563eb","Architecture":"#2563eb","Bureaux d'études":"#2563eb","Bureaux d'études / Ingénierie":"#2563eb","Décoration & Aménagement":"#be185d","Decoration & Amenagement":"#be185d","Décorateurs / Architectes d'intérieur":"#be185d","Cuisinistes":"#be185d","Salles de bains":"#be185d","Gros oeuvre & BTP":"#d97706","Béton / Matériaux":"#d97706","Charpentiers":"#d97706","Charpentiers / Couvreurs":"#d97706","Couvreurs":"#d97706","Démolition / Déconstruction":"#d97706","Étanchéité":"#d97706","Assainissement":"#d97706","Forage":"#d97706","Géomètres-experts":"#16a34a","Geometres-experts":"#16a34a","Notaires & Juridique":"#0891b2","Notaires":"#0891b2","Diagnostiqueurs immobiliers":"#0891b2","Expertise Immobilière":"#0891b2","Paysagistes & Extérieur":"#059669","Paysagistes & Extérieur":"#059669","Paysagistes":"#059669","Jardiniers / Espaces verts":"#059669","Piscinistes":"#059669","Piscines":"#059669","Piscines & Assainissement":"#059669","Portails / Clôtures":"#059669","Second oeuvre":"#e07a2f","Electricite":"#f59e0b","Maconnerie":"#92400e","Plomberie":"#0284c7","Peinture":"#c026d3","Menuiserie":"#a16207","Terrassement":"#4d7c0f","Terrassement / VRD":"#4d7c0f","Couverture et etancheite":"#9f1239","Isolation":"#6366f1","Plaquistes / Plâtriers":"#e07a2f","Ravalement / Façades":"#c026d3","Serruriers & Métalliers":"#e07a2f","Serruriers & Metalliers":"#e07a2f","Serruriers / Métalliers":"#e07a2f","Métalliers / Serruriers":"#e07a2f","Vitriers / Miroitiers":"#0891b2","Stores / Volets":"#0891b2","Domotique / Alarmes":"#f59e0b","Ascenseurs":"#e07a2f","Services financiers":"#065f46","Location matériel BTP":"#065f46","Matériaux de construction":"#065f46","Nettoyage / Entretien":"#059669","Débarras / Nettoyage":"#059669","Déménagement":"#065f46","Garde-meubles / Stockage":"#065f46","Dératisation / Désinsectisation":"#92400e","Énergie & Climatisation":"#0ea5e9","Energie & Climatisation":"#0ea5e9","Climatisation / Froid":"#0ea5e9","Énergie Solaire / Photovoltaïque":"#f59e0b","Énergie solaire / Photovoltaïque":"#f59e0b"};
 
 // Load JSON data (flat array format)
 fetch('data/artisans.json').then(r=>r.json()).then(rawData=>{
   // rawData is a flat array of artisan objects
   const artisans = Array.isArray(rawData) ? rawData : (rawData.artisans || rawData);
 
-  allPros=artisans.map(a=>({n:a.nom_entreprise||a.nom||'',c:a.categorie_principale||a.categorie||'',s:a.sous_categorie||a.categorie_principale||a.categorie||'',co:a.commune||'',t:a.telephone||'',ng:a.note_google||a.note||'',na:a.nb_avis_google||a.avis||'',w:a.site_web||'',fb:a.facebook||'',e:a.email||'',si:a.siret||'',v:a.statut_verification==='vérifié'}));
+  allPros=artisans.filter(a=>(a.nom_entreprise||a.nom)&&(a.commune)).map(a=>({n:a.nom_entreprise||a.nom||'',c:a.categorie_principale||a.categorie||'',s:a.sous_categorie||a.categorie_principale||a.categorie||'',co:a.commune||'',t:a.telephone||'',ng:a.note_google||a.note||'',na:a.nb_avis_google||a.avis||'',w:a.site_web||'',fb:a.facebook||'',e:a.email||'',si:a.siret||'',v:a.statut_verification==='vérifié'}));
 
   // Build meta from data
   const metaCats={}, metaComs={};
@@ -1186,21 +1237,52 @@ fetch('data/artisans.json').then(r=>r.json()).then(rawData=>{
   });
   const meta={categories:metaCats, communes:metaComs};
 
-  // Update title
+  // Update all dynamic stats with real data
+  const nPros=allPros.length;
+  const nComs=Object.keys(meta.communes).length;
+  const nCats=Object.keys(meta.categories).length;
   const tt=document.getElementById('annTitle');
-  if(tt)tt.textContent=allPros.length.toLocaleString('fr-FR')+' professionnels dans '+Object.keys(meta.communes).length+' communes';
-  // Update hero stat
+  if(tt)tt.textContent=nPros.toLocaleString('fr-FR')+' professionnels dans '+nComs+' communes';
   const hs=document.getElementById('heroStatPros');
-  if(hs)hs.textContent=allPros.length.toLocaleString('fr-FR')+'+';
+  if(hs)hs.textContent=nPros.toLocaleString('fr-FR');
+  const hsc=document.getElementById('heroStatComs');
+  if(hsc)hsc.textContent=nComs;
+  const hscat=document.getElementById('heroStatCats');
+  if(hscat)hscat.textContent=nCats;
+  const hb=document.getElementById('heroBadgeCount');
+  if(hb)hb.textContent=nPros.toLocaleString('fr-FR')+'+';
+  const hbc=document.getElementById('heroBadgeCats');
+  if(hbc)hbc.textContent=nCats;
   // Populate filters dynamically
   populateFilters(meta);
   // Update category cards
   updateCatCards(meta.categories);
   filterAnnuaire();
 
+  // === POPULATE TOP PROS FROM REAL DATA ===
+  const topPros=allPros.filter(p=>p.ng&&parseFloat(p.ng)>=4.5&&p.na&&parseInt(p.na)>=10&&p.t).sort((a,b)=>{
+    const nd=parseFloat(b.ng)-parseFloat(a.ng);
+    return nd!==0?nd:parseInt(b.na)-parseInt(a.na);
+  }).slice(0,4);
+  const tpg=document.getElementById('topProsGrid');
+  if(tpg&&topPros.length){
+    tpg.innerHTML=topPros.map((p,i)=>{
+      const color=catColorsMap[p.c]||'#e07a2f';
+      const emoji=catEmojisMap[p.c]||'📍';
+      const words=p.n.split(/[\s-]+/).filter(w=>w.length>0);
+      const initials=words.length>=2?(words[0][0]+words[1][0]).toUpperCase():p.n.slice(0,2).toUpperCase();
+      const stars='★'.repeat(Math.round(parseFloat(p.ng)));
+      return '<div class="pro-card animate-on-scroll stagger-'+(i+1)+'">'
+        +'<div class="pro-card-img" style="background:linear-gradient(135deg,'+color+'22,'+color+'44);display:flex;align-items:center;justify-content:center"><div style="font-size:2.5rem;font-weight:700;color:'+color+';opacity:0.6">'+initials+'</div></div>'
+        +'<div class="pro-card-body"><h3>'+sanitize(p.n)+'</h3><div class="category">'+emoji+' '+sanitize(p.s)+'</div><div class="location">📍 '+sanitize(p.co)+'</div><div class="rating"><span class="stars">'+stars+'</span> '+p.ng+' ('+p.na+' avis Google)</div>'
+        +(p.t?'<div style="margin-top:6px;font-size:0.82rem">📞 <a href="tel:'+p.t.replace(/[^0-9+]/g,'')+'" style="color:var(--warm-orange)">'+p.t+'</a></div>':'')
+        +'</div></div>';
+    }).join('');
+  }
+
   // === CONNECT CHATBOT TO REAL DATA ===
   window._chatData = allPros;
-  console.log('✅ Annuaire chargé: '+allPros.length+' pros, '+Object.keys(meta.categories).length+' catégories, '+Object.keys(meta.communes).length+' communes');
+  console.log('Annuaire chargé: '+allPros.length+' pros, '+Object.keys(meta.categories).length+' catégories, '+Object.keys(meta.communes).length+' communes');
 }).catch(e=>{console.error('Erreur chargement annuaire:',e);document.getElementById('annList').innerHTML='<p style="text-align:center;color:red;padding:40px">Erreur de chargement des données. '+e.message+'</p>'});
 
 function populateFilters(meta){
